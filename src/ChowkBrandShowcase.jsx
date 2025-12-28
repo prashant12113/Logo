@@ -1,8 +1,38 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+
+const useMediaQuery = (query) => {
+  const getMatches = () => {
+    if (typeof window === 'undefined' || typeof window.matchMedia === 'undefined') return false;
+    return window.matchMedia(query).matches;
+  };
+
+  const [matches, setMatches] = useState(getMatches);
+
+  useEffect(() => {
+    if (typeof window === 'undefined' || typeof window.matchMedia === 'undefined') return;
+    const mql = window.matchMedia(query);
+
+    const onChange = () => setMatches(mql.matches);
+    onChange();
+
+    if (typeof mql.addEventListener === 'function') {
+      mql.addEventListener('change', onChange);
+      return () => mql.removeEventListener('change', onChange);
+    }
+
+    // Safari < 14
+    mql.addListener(onChange);
+    return () => mql.removeListener(onChange);
+  }, [query]);
+
+  return matches;
+};
 
 const ChowkBrandShowcase = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [activeTab, setActiveTab] = useState('logos');
+  const isMobile = useMediaQuery('(max-width: 640px)');
+  const isTiny = useMediaQuery('(max-width: 420px)');
 
   const colors = {
     coral: '#E07A5F',
@@ -98,17 +128,17 @@ const ChowkBrandShowcase = () => {
       background: darkMode 
         ? 'linear-gradient(135deg, #1a1614 0%, #2d2521 100%)' 
         : 'linear-gradient(135deg, #fdfbf9 0%, #f8f4f0 100%)',
-      padding: '40px 24px',
+      padding: isMobile ? '24px 16px' : '40px 24px',
       fontFamily: "'Nunito', system-ui, sans-serif",
       transition: 'all 0.3s ease'
     }}>
       {/* Header */}
-      <div style={{ maxWidth: 1000, margin: '0 auto 40px', textAlign: 'center' }}>
-        <div style={{ marginBottom: 24 }}>
-          <LogoMark size={80} />
+      <div style={{ maxWidth: 1000, margin: `0 auto ${isMobile ? 24 : 40}px`, textAlign: 'center' }}>
+        <div style={{ marginBottom: isMobile ? 16 : 24 }}>
+          <LogoMark size={isMobile ? 64 : 80} />
         </div>
         <h1 style={{ 
-          fontSize: 36, 
+          fontSize: isMobile ? 28 : 36, 
           fontWeight: 800, 
           color: darkMode ? '#fff' : colors.charcoal,
           marginBottom: 8
@@ -116,7 +146,7 @@ const ChowkBrandShowcase = () => {
           Chowk Brand Kit
         </h1>
         <p style={{ 
-          fontSize: 16, 
+          fontSize: isMobile ? 14 : 16, 
           color: darkMode ? '#a89f9a' : '#6b5f58',
           marginBottom: 20
         }}>
@@ -128,7 +158,7 @@ const ChowkBrandShowcase = () => {
             background: darkMode ? '#3d3532' : '#e8e2dc',
             color: darkMode ? '#fff' : colors.charcoal,
             border: 'none',
-            padding: '10px 20px',
+            padding: isMobile ? '10px 16px' : '10px 20px',
             borderRadius: 20,
             cursor: 'pointer',
             fontSize: 14,
@@ -142,11 +172,12 @@ const ChowkBrandShowcase = () => {
       {/* Tabs */}
       <div style={{ 
         maxWidth: 1000, 
-        margin: '0 auto 32px',
+        margin: `0 auto ${isMobile ? 20 : 32}px`,
         display: 'flex',
         gap: 8,
         justifyContent: 'center',
-        flexWrap: 'wrap'
+        flexWrap: 'wrap',
+        padding: isMobile ? '0 4px' : 0
       }}>
         {tabs.map(tab => (
           <button
@@ -158,10 +189,10 @@ const ChowkBrandShowcase = () => {
                 : (darkMode ? '#2d2521' : '#fff'),
               color: activeTab === tab.id ? '#fff' : (darkMode ? '#e8e2dc' : colors.charcoal),
               border: `2px solid ${activeTab === tab.id ? 'transparent' : (darkMode ? '#3d3532' : '#e8e2dc')}`,
-              padding: '10px 20px',
+              padding: isMobile ? '10px 14px' : '10px 20px',
               borderRadius: 10,
               cursor: 'pointer',
-              fontSize: 14,
+              fontSize: isMobile ? 13 : 14,
               fontWeight: 600,
               transition: 'all 0.2s ease'
             }}
@@ -181,14 +212,14 @@ const ChowkBrandShowcase = () => {
             <div style={{
               background: darkMode ? '#2d2521' : '#fff',
               borderRadius: 20,
-              padding: 40,
+              padding: isMobile ? 24 : 40,
               boxShadow: darkMode ? '0 8px 32px rgba(0,0,0,0.3)' : '0 8px 32px rgba(45,37,33,0.06)'
             }}>
               <h3 style={{ fontSize: 14, fontWeight: 700, color: darkMode ? '#a89f9a' : '#6b5f58', marginBottom: 24, textTransform: 'uppercase', letterSpacing: 1 }}>
                 Primary Logo
               </h3>
               <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <FullLogo variant="color" scale={1.2} />
+                <FullLogo variant="color" scale={isMobile ? (isTiny ? 0.85 : 0.95) : 1.2} />
               </div>
             </div>
 
@@ -196,41 +227,41 @@ const ChowkBrandShowcase = () => {
             <div style={{
               background: '#1a1614',
               borderRadius: 20,
-              padding: 40
+              padding: isMobile ? 24 : 40
             }}>
               <h3 style={{ fontSize: 14, fontWeight: 700, color: '#a89f9a', marginBottom: 24, textTransform: 'uppercase', letterSpacing: 1 }}>
                 Dark Mode
               </h3>
               <div style={{ display: 'flex', justifyContent: 'center' }}>
-                <FullLogo variant="dark" scale={1.2} />
+                <FullLogo variant="dark" scale={isMobile ? (isTiny ? 0.85 : 0.95) : 1.2} />
               </div>
             </div>
 
             {/* Monochrome Versions */}
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: 24 }}>
               <div style={{
                 background: darkMode ? '#2d2521' : '#fff',
                 borderRadius: 20,
-                padding: 32,
+                padding: isMobile ? 22 : 32,
                 boxShadow: darkMode ? '0 8px 32px rgba(0,0,0,0.3)' : '0 8px 32px rgba(45,37,33,0.06)'
               }}>
                 <h3 style={{ fontSize: 12, fontWeight: 700, color: darkMode ? '#a89f9a' : '#6b5f58', marginBottom: 20, textTransform: 'uppercase', letterSpacing: 1 }}>
                   Mono Black
                 </h3>
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
-                  <FullLogo variant="mono-black" scale={0.9} />
+                  <FullLogo variant="mono-black" scale={isMobile ? 0.8 : 0.9} />
                 </div>
               </div>
               <div style={{
                 background: colors.charcoal,
                 borderRadius: 20,
-                padding: 32
+                padding: isMobile ? 22 : 32
               }}>
                 <h3 style={{ fontSize: 12, fontWeight: 700, color: '#a89f9a', marginBottom: 20, textTransform: 'uppercase', letterSpacing: 1 }}>
                   Mono White
                 </h3>
                 <div style={{ display: 'flex', justifyContent: 'center' }}>
-                  <FullLogo variant="mono-white" scale={0.9} />
+                  <FullLogo variant="mono-white" scale={isMobile ? 0.8 : 0.9} />
                 </div>
               </div>
             </div>
@@ -239,17 +270,17 @@ const ChowkBrandShowcase = () => {
             <div style={{
               background: darkMode ? '#2d2521' : '#fff',
               borderRadius: 20,
-              padding: 40,
+              padding: isMobile ? 24 : 40,
               boxShadow: darkMode ? '0 8px 32px rgba(0,0,0,0.3)' : '0 8px 32px rgba(45,37,33,0.06)'
             }}>
               <h3 style={{ fontSize: 14, fontWeight: 700, color: darkMode ? '#a89f9a' : '#6b5f58', marginBottom: 24, textTransform: 'uppercase', letterSpacing: 1 }}>
                 Stacked Version
               </h3>
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 16 }}>
-                <LogoMark size={100} />
+                <LogoMark size={isMobile ? 84 : 100} />
                 <span style={{ 
                   fontFamily: "'Nunito', system-ui, sans-serif", 
-                  fontSize: 32, 
+                  fontSize: isMobile ? 28 : 32, 
                   fontWeight: 700, 
                   color: darkMode ? '#fff' : colors.warmBrown,
                   letterSpacing: 1
@@ -266,7 +297,7 @@ const ChowkBrandShowcase = () => {
           <div style={{
             background: darkMode ? '#2d2521' : '#fff',
             borderRadius: 20,
-            padding: 40,
+            padding: isMobile ? 24 : 40,
             boxShadow: darkMode ? '0 8px 32px rgba(0,0,0,0.3)' : '0 8px 32px rgba(45,37,33,0.06)'
           }}>
             <h3 style={{ fontSize: 14, fontWeight: 700, color: darkMode ? '#a89f9a' : '#6b5f58', marginBottom: 32, textTransform: 'uppercase', letterSpacing: 1 }}>
@@ -282,8 +313,8 @@ const ChowkBrandShowcase = () => {
                 ].map(c => (
                   <div key={c.name} style={{ textAlign: 'center' }}>
                     <div style={{
-                      width: 80,
-                      height: 80,
+                      width: isMobile ? 64 : 80,
+                      height: isMobile ? 64 : 80,
                       borderRadius: 16,
                       background: c.hex,
                       boxShadow: '0 4px 16px rgba(0,0,0,0.15)',
@@ -305,8 +336,8 @@ const ChowkBrandShowcase = () => {
                 ].map(c => (
                   <div key={c.name} style={{ textAlign: 'center' }}>
                     <div style={{
-                      width: 80,
-                      height: 80,
+                      width: isMobile ? 64 : 80,
+                      height: isMobile ? 64 : 80,
                       borderRadius: 16,
                       background: c.hex,
                       boxShadow: '0 4px 16px rgba(0,0,0,0.15)',
@@ -330,8 +361,8 @@ const ChowkBrandShowcase = () => {
                 ].map(c => (
                   <div key={c.name} style={{ textAlign: 'center' }}>
                     <div style={{
-                      width: 80,
-                      height: 80,
+                      width: isMobile ? 64 : 80,
+                      height: isMobile ? 64 : 80,
                       borderRadius: 16,
                       background: c.hex,
                       boxShadow: '0 4px 16px rgba(0,0,0,0.1)',
@@ -354,7 +385,7 @@ const ChowkBrandShowcase = () => {
             <div style={{
               background: darkMode ? '#2d2521' : '#fff',
               borderRadius: 20,
-              padding: 40,
+              padding: isMobile ? 24 : 40,
               boxShadow: darkMode ? '0 8px 32px rgba(0,0,0,0.3)' : '0 8px 32px rgba(45,37,33,0.06)'
             }}>
               <h3 style={{ fontSize: 14, fontWeight: 700, color: darkMode ? '#a89f9a' : '#6b5f58', marginBottom: 32, textTransform: 'uppercase', letterSpacing: 1 }}>
@@ -364,9 +395,9 @@ const ChowkBrandShowcase = () => {
                 {/* Light background */}
                 <div style={{ textAlign: 'center' }}>
                   <div style={{
-                    width: 120,
-                    height: 120,
-                    borderRadius: 28,
+                    width: isMobile ? 104 : 120,
+                    height: isMobile ? 104 : 120,
+                    borderRadius: isMobile ? 24 : 28,
                     background: `linear-gradient(135deg, ${colors.cream} 0%, ${colors.offWhite} 100%)`,
                     display: 'flex',
                     alignItems: 'center',
@@ -374,16 +405,16 @@ const ChowkBrandShowcase = () => {
                     boxShadow: '0 8px 24px rgba(0,0,0,0.12)',
                     marginBottom: 12
                   }}>
-                    <LogoMark size={80} />
+                    <LogoMark size={isMobile ? 72 : 80} />
                   </div>
                   <div style={{ fontSize: 12, color: darkMode ? '#a89f9a' : '#6b5f58' }}>Light Background</div>
                 </div>
                 {/* Colored background */}
                 <div style={{ textAlign: 'center' }}>
                   <div style={{
-                    width: 120,
-                    height: 120,
-                    borderRadius: 28,
+                    width: isMobile ? 104 : 120,
+                    height: isMobile ? 104 : 120,
+                    borderRadius: isMobile ? 24 : 28,
                     background: `linear-gradient(135deg, ${colors.coral} 0%, ${colors.terracotta} 100%)`,
                     display: 'flex',
                     alignItems: 'center',
@@ -391,7 +422,7 @@ const ChowkBrandShowcase = () => {
                     boxShadow: '0 8px 24px rgba(0,0,0,0.2)',
                     marginBottom: 12
                   }}>
-                    <LogoMark size={80} variant="white" />
+                    <LogoMark size={isMobile ? 72 : 80} variant="white" />
                   </div>
                   <div style={{ fontSize: 12, color: darkMode ? '#a89f9a' : '#6b5f58' }}>Colored Background</div>
                 </div>
@@ -402,7 +433,7 @@ const ChowkBrandShowcase = () => {
             <div style={{
               background: darkMode ? '#2d2521' : '#fff',
               borderRadius: 20,
-              padding: 40,
+              padding: isMobile ? 24 : 40,
               boxShadow: darkMode ? '0 8px 32px rgba(0,0,0,0.3)' : '0 8px 32px rgba(45,37,33,0.06)'
             }}>
               <h3 style={{ fontSize: 14, fontWeight: 700, color: darkMode ? '#a89f9a' : '#6b5f58', marginBottom: 32, textTransform: 'uppercase', letterSpacing: 1 }}>
@@ -435,10 +466,10 @@ const ChowkBrandShowcase = () => {
         {activeTab === 'usage' && (
           <div style={{ display: 'grid', gap: 24 }}>
             {/* Do's */}
-            <div style={{
+            {/* <div style={{
               background: darkMode ? '#2d2521' : '#fff',
               borderRadius: 20,
-              padding: 32,
+              padding: isMobile ? 24 : 32,
               boxShadow: darkMode ? '0 8px 32px rgba(0,0,0,0.3)' : '0 8px 32px rgba(45,37,33,0.06)'
             }}>
               <h3 style={{ fontSize: 14, fontWeight: 700, color: '#4CAF50', marginBottom: 20 }}>
@@ -449,7 +480,7 @@ const ChowkBrandShowcase = () => {
                 padding: '0 0 0 20px', 
                 color: darkMode ? '#e8e2dc' : colors.charcoal,
                 lineHeight: 2,
-                fontSize: 14
+                fontSize: isMobile ? 13 : 14
               }}>
                 <li>Use provided logo files without modification</li>
                 <li>Maintain minimum clear space around logo</li>
@@ -457,13 +488,13 @@ const ChowkBrandShowcase = () => {
                 <li>Scale logo proportionally</li>
                 <li>Use monochrome versions for single-color applications</li>
               </ul>
-            </div>
+            </div> */}
 
             {/* Don'ts */}
-            <div style={{
+            {/* <div style={{
               background: darkMode ? '#2d2521' : '#fff',
               borderRadius: 20,
-              padding: 32,
+              padding: isMobile ? 24 : 32,
               boxShadow: darkMode ? '0 8px 32px rgba(0,0,0,0.3)' : '0 8px 32px rgba(45,37,33,0.06)'
             }}>
               <h3 style={{ fontSize: 14, fontWeight: 700, color: '#F44336', marginBottom: 20 }}>
@@ -474,7 +505,7 @@ const ChowkBrandShowcase = () => {
                 padding: '0 0 0 20px', 
                 color: darkMode ? '#e8e2dc' : colors.charcoal,
                 lineHeight: 2,
-                fontSize: 14
+                fontSize: isMobile ? 13 : 14
               }}>
                 <li>Stretch or distort the logo</li>
                 <li>Change logo colors outside brand palette</li>
@@ -483,13 +514,13 @@ const ChowkBrandShowcase = () => {
                 <li>Rotate the logo</li>
                 <li>Rearrange or separate logo elements</li>
               </ul>
-            </div>
+            </div> */}
 
             {/* Typography */}
             <div style={{
               background: darkMode ? '#2d2521' : '#fff',
               borderRadius: 20,
-              padding: 32,
+              padding: isMobile ? 24 : 32,
               boxShadow: darkMode ? '0 8px 32px rgba(0,0,0,0.3)' : '0 8px 32px rgba(45,37,33,0.06)'
             }}>
               <h3 style={{ fontSize: 14, fontWeight: 700, color: darkMode ? '#a89f9a' : '#6b5f58', marginBottom: 20, textTransform: 'uppercase', letterSpacing: 1 }}>
@@ -507,13 +538,13 @@ const ChowkBrandShowcase = () => {
                 </p>
                 <div style={{ 
                   background: darkMode ? '#1a1614' : '#f8f4f0', 
-                  padding: 24, 
+                  padding: isMobile ? 18 : 24, 
                   borderRadius: 12,
                   marginTop: 20
                 }}>
                   <span style={{ 
                     fontFamily: "'Nunito', system-ui, sans-serif", 
-                    fontSize: 48, 
+                    fontSize: isMobile ? 40 : 48, 
                     fontWeight: 700, 
                     color: darkMode ? '#fff' : colors.warmBrown,
                     letterSpacing: 1
@@ -533,7 +564,8 @@ const ChowkBrandShowcase = () => {
         margin: '48px auto 0', 
         textAlign: 'center',
         color: darkMode ? '#6a5f5a' : '#a89f9a',
-        fontSize: 13
+        fontSize: isMobile ? 12 : 13,
+        padding: isMobile ? '0 8px' : 0
       }}>
         Chowk Brand Kit v1.0 — Converging Petals Logo
       </div>
