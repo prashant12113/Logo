@@ -6,8 +6,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This repo is set up to deploy to **GitHub Pages** via **GitHub Actions**.
 
+- **Live site**: `https://prashant12113.github.io/Logo/`
 - **One-time GitHub setting**: in your repo, go to **Settings → Pages → Build and deployment** and set **Source** to **GitHub Actions**.
-- **Deploy**: push to the `main` branch (the workflow builds and publishes the `dist/` folder).
+- **Deploy**: push to the `main` or `master` branch (the workflow builds and publishes the `dist/` folder).
 
 ## Available Scripts
 
