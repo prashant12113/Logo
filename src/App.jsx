@@ -5,8 +5,8 @@ import ChowkCP1BrandShowcase from './ChowkCP1BrandShowcase';
 function App() {
   return (
     <div className="App">
-      <ChowkCP1BrandShowcase />
       <ChowkBrandShowcase />
+      <ChowkCP1BrandShowcase />
     </div>
   );
 }
