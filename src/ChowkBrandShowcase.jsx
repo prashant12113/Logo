@@ -145,6 +145,14 @@ const ChowkBrandShowcase = () => {
         }}>
           Chowk Brand Kit
         </h1>
+        <h2 style={{ 
+          fontSize: isMobile ? 20 : 28, 
+          fontWeight: 500, 
+          color: darkMode ? '#fff' : colors.charcoal,
+          marginBottom: 8
+        }}>
+          "Chowk" (चौक) is a Hindi term referring to a public square, marketplace, intersection, or gathering place commonly found across South Asia, particularly in India. The word can also mean a crossroads where multiple paths meet, representing community, commerce, and connectivity.
+        </h2>
         <p style={{ 
           fontSize: isMobile ? 14 : 16, 
           color: darkMode ? '#a89f9a' : '#6b5f58',
