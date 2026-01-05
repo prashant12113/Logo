@@ -1,0 +1,606 @@
+:root {
+  --saffron: #c96b4b;
+  --saffron-light: #e8a88a;
+  --saffron-pale: #fff5f0;
+  --dark-brown: #3d3d3d;
+  --cream: #fffbf7;
+  --white: #ffffff;
+  --red: #d32f2f;
+  --orange: #ff8f00;
+}
+
+.MarketingStickers {
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #f0f0f0;
+  padding: 40px;
+  min-height: 100vh;
+}
+
+.MarketingStickers__pageTitle {
+  text-align: center;
+  font-size: 28px;
+  color: var(--dark-brown);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.MarketingStickers__pageSubtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.MarketingStickers__sectionTitle {
+  font-size: 20px;
+  color: var(--dark-brown);
+  margin: 40px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--saffron-light);
+}
+
+.MarketingStickers__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.MarketingStickers__container {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.MarketingStickers__label {
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* ============ 7x7cm STICKERS ============ */
+.MarketingStickers__sticker7 {
+  width: 265px; /* 7cm at 96dpi */
+  height: 265px;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.MarketingStickers__stickerGeneral {
+  background: linear-gradient(135deg, var(--saffron) 0%, #a0522d 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.MarketingStickers__logoCircle {
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  font-size: 10px;
+  color: var(--saffron);
+}
+
+.MarketingStickers__qrBox {
+  width: 110px;
+  height: 110px;
+  background: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: #999;
+  margin-bottom: 12px;
+}
+
+.MarketingStickers__textHindi {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.MarketingStickers__urlWhite {
+  font-size: 13px;
+  font-weight: 700;
+  color: white;
+}
+
+.MarketingStickers__stickerMedical {
+  background: linear-gradient(135deg, var(--red) 0%, #b71c1c 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.MarketingStickers__icon {
+  font-size: 35px;
+  margin-bottom: 8px;
+}
+
+.MarketingStickers__qrBoxSmall {
+  width: 100px;
+  height: 100px;
+  background: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.MarketingStickers__stickerFood {
+  background: linear-gradient(135deg, var(--orange) 0%, #f57c00 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.MarketingStickers__stickerNav {
+  background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.MarketingStickers__urlNav {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--saffron-light);
+}
+
+.MarketingStickers__stickerMinimal {
+  background: white;
+  border: 3px solid var(--saffron);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.MarketingStickers__logoCircleMinimal {
+  width: 45px;
+  height: 45px;
+  background: var(--saffron-pale);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  font-size: 9px;
+  color: var(--saffron);
+}
+
+.MarketingStickers__qrBoxMinimal {
+  width: 110px;
+  height: 110px;
+  background: #f9f9f9;
+  border: 2px dashed var(--saffron-light);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.MarketingStickers__textHindiMinimal {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 14px;
+  color: var(--dark-brown);
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.MarketingStickers__urlSaffron {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--saffron);
+}
+
+/* ============ 5x5cm STICKERS (SMALL) ============ */
+.MarketingStickers__sticker5 {
+  width: 189px; /* 5cm at 96dpi */
+  height: 189px;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.MarketingStickers__smallSaffron {
+  background: var(--saffron);
+}
+
+.MarketingStickers__qrBox5 {
+  width: 90px;
+  height: 90px;
+  background: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.MarketingStickers__text5 {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 13px;
+  color: white;
+  text-align: center;
+}
+
+.MarketingStickers__urlWhiteSmall {
+  font-size: 11px;
+  font-weight: 700;
+  color: white;
+}
+
+.MarketingStickers__smallWhite {
+  background: white;
+  border: 2px solid var(--saffron);
+}
+
+.MarketingStickers__qrBox5White {
+  width: 90px;
+  height: 90px;
+  background: var(--saffron-pale);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.MarketingStickers__text5White {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 12px;
+  color: var(--dark-brown);
+  text-align: center;
+}
+
+.MarketingStickers__urlSaffronSmall {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--saffron);
+}
+
+.MarketingStickers__smallMedical {
+  background: var(--red);
+}
+
+.MarketingStickers__smallFood {
+  background: var(--orange);
+}
+
+.MarketingStickers__qrBox5Medical {
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  color: #999;
+  margin-bottom: 8px;
+}
+
+.MarketingStickers__urlWhiteTiny {
+  font-size: 10px;
+  font-weight: 700;
+  color: white;
+}
+
+/* ============ 10x10cm STICKERS (LARGE) ============ */
+.MarketingStickers__sticker10 {
+  width: 378px; /* 10cm at 96dpi */
+  height: max-content;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.MarketingStickers__large {
+  background: linear-gradient(135deg, var(--saffron) 0%, #a0522d 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  height: 100%;
+}
+
+.MarketingStickers__logoCircleLarge {
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  font-size: 11px;
+  color: var(--saffron);
+}
+
+.MarketingStickers__titleLarge {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.MarketingStickers__qrBoxLarge {
+  width: 160px;
+  height: 160px;
+  background: white;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 15px;
+}
+
+.MarketingStickers__subtitleLarge {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 8px;
+}
+
+.MarketingStickers__urlWhiteLarge {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+}
+
+/* ============ AUTO RICKSHAW STICKERS ============ */
+.MarketingStickers__autoBack {
+  width: 456px;
+  height: 304px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.MarketingStickers__autoBackDesign {
+  background: linear-gradient(135deg, var(--saffron) 0%, #a0522d 100%);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  gap: 20px;
+}
+
+.MarketingStickers__autoLeft {
+  flex: 1;
+}
+
+.MarketingStickers__autoTitle {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 28px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.MarketingStickers__autoSubtitle {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 15px;
+}
+
+.MarketingStickers__autoUrl {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+}
+
+.MarketingStickers__autoQrBox {
+  width: 140px;
+  height: 140px;
+  background: white;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #999;
+}
+
+.MarketingStickers__autoSide {
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.MarketingStickers__autoSideDesign {
+  background: var(--saffron);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 25px;
+  gap: 20px;
+}
+
+.MarketingStickers__autoIcons {
+  font-size: 24px;
+}
+
+.MarketingStickers__autoSideText {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 18px;
+  color: white;
+}
+
+.MarketingStickers__autoSideUrl {
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 8px 15px;
+  border-radius: 20px;
+}
+
+/* ============ TEA STALL CARDS ============ */
+.MarketingStickers__teaCard {
+  width: 300px;
+  height: max-content;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.MarketingStickers__teaCardDesign {
+  background: white;
+  border: 3px solid var(--saffron);
+  height: max-content;
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+
+.MarketingStickers__teaLeft {
+  flex: 1;
+}
+
+.MarketingStickers__logoSmall {
+  width: 35px;
+  height: 35px;
+  background: var(--saffron-pale);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  color: var(--saffron);
+  margin-bottom: 10px;
+}
+
+.MarketingStickers__teaTitle {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 14px;
+  color: var(--dark-brown);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.MarketingStickers__teaFeatures {
+  font-size: 11px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.MarketingStickers__teaUrl {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--saffron);
+  margin-top: 10px;
+}
+
+.MarketingStickers__teaQr {
+  width: 100px;
+  height: 100px;
+  background: var(--saffron-pale);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: #999;
+  align-self: center;
+}
+
+.MarketingStickers__tentCard {
+  width: 200px;
+  height: 150px;
+  background: var(--saffron-pale);
+  border: 2px solid var(--saffron);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.MarketingStickers__tentText {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 13px;
+  color: var(--dark-brown);
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.MarketingStickers__tentQr {
+  width: 70px;
+  height: 70px;
+  background: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  color: #999;
+  margin-bottom: 8px;
+}
+
+.MarketingStickers__tentUrl {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--saffron);
+}
+
+/* Print styles (kept, scoped) */
+@media print {
+  .MarketingStickers {
+    background: white;
+    padding: 20px;
+  }
+  .MarketingStickers__pageTitle,
+  .MarketingStickers__pageSubtitle,
+  .MarketingStickers__sectionTitle,
+  .MarketingStickers__label {
+    display: none;
+  }
+  .MarketingStickers__container {
+    box-shadow: none;
+    padding: 10px;
+    page-break-inside: avoid;
+  }
+}
+
+

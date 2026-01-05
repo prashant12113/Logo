@@ -1,0 +1,343 @@
+:root {
+  --saffron: #c96b4b;
+  --saffron-light: #e8a88a;
+  --dark: #2d2d2d;
+  --cream: #fff8f5;
+}
+
+.MarketingBanners {
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #1a1a1a;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  min-height: 100vh;
+}
+
+.MarketingBanners__section {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.MarketingBanners__title {
+  color: var(--saffron);
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.MarketingBanners__banner {
+  background: var(--saffron);
+  border-radius: 8px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  position: relative;
+}
+
+.MarketingBanners__bannerEntry {
+  width: 100%;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.MarketingBanners__entryLeft {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.MarketingBanners__entryLogo {
+  width: 60px;
+  height: 60px;
+}
+
+.MarketingBanners__entryMain {
+  color: white;
+}
+
+.MarketingBanners__entryHeadline {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 28px;
+  line-height: 1.1;
+}
+
+.MarketingBanners__entrySub {
+  font-size: 12px;
+  opacity: 0.9;
+  margin-top: 5px;
+}
+
+.MarketingBanners__entryServices {
+  display: flex;
+  gap: 15px;
+  color: white;
+}
+
+.MarketingBanners__entryService {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 8px 12px;
+  border-radius: 20px;
+}
+
+.MarketingBanners__entryRight {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.MarketingBanners__entryQr {
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  color: #999;
+}
+
+.MarketingBanners__entryUrl {
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.MarketingBanners__bannerStandee {
+  width: 250px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+  margin: 0 auto;
+}
+
+.MarketingBanners__standeeLogo {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 15px;
+}
+
+.MarketingBanners__standeeHeadline {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 28px;
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.MarketingBanners__standeeSub {
+  color: white;
+  text-align: center;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.MarketingBanners__standeeServices {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.MarketingBanners__standeeService {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 12px 15px;
+  border-radius: 8px;
+  color: white;
+  font-size: 13px;
+}
+
+.MarketingBanners__standeeIcon {
+  font-size: 20px;
+}
+
+.MarketingBanners__standeeQrBox {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.MarketingBanners__standeeQr {
+  width: 100px;
+  height: 100px;
+  background: #f5f5f5;
+  border: 2px dashed #ccc;
+  margin: 0 auto 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  color: #999;
+  border-radius: 8px;
+}
+
+.MarketingBanners__standeeUrl {
+  color: var(--saffron);
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.MarketingBanners__standeeFeatures {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.MarketingBanners__standeeFeature {
+  font-size: 10px;
+  color: white;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 5px 10px;
+  border-radius: 12px;
+}
+
+.MarketingBanners__bannerRoad {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.MarketingBanners__roadLogo {
+  width: 40px;
+  height: 40px;
+}
+
+.MarketingBanners__roadText {
+  color: white;
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 22px;
+}
+
+.MarketingBanners__roadUrl {
+  color: white;
+  font-size: 18px;
+  font-weight: 800;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 8px 20px;
+  border-radius: 25px;
+}
+
+.MarketingBanners__roadQr {
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6px;
+  color: #999;
+}
+
+.MarketingBanners__bannerGhat {
+  width: 100%;
+  max-width: 600px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+  margin: 0 auto;
+  background: linear-gradient(135deg, #f5a623 0%, #d4880f 100%);
+}
+
+.MarketingBanners__ghatLeft {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: white;
+}
+
+.MarketingBanners__ghatEmoji {
+  font-size: 40px;
+}
+
+.MarketingBanners__ghatText {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.MarketingBanners__ghatRight {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.MarketingBanners__ghatQr {
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6px;
+  color: #999;
+}
+
+.MarketingBanners__ghatUrl {
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.MarketingBanners__bannerMedical {
+  background: linear-gradient(135deg, #d64545 0%, #b83333 100%);
+}
+
+.MarketingBanners__info {
+  width: 100%;
+  max-width: 900px;
+  background: #222;
+  border-radius: 12px;
+  padding: 30px;
+  color: #ccc;
+}
+
+.MarketingBanners__info h2 {
+  color: var(--saffron);
+  margin-bottom: 15px;
+}
+
+.MarketingBanners__info table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+}
+
+.MarketingBanners__info th,
+.MarketingBanners__info td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #444;
+  font-size: 13px;
+}
+
+.MarketingBanners__info th {
+  color: var(--saffron-light);
+}
+
+

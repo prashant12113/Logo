@@ -1,0 +1,112 @@
+:root {
+  --saffron: #c96b4b;
+  --saffron-light: #e8a88a;
+  --dark-brown: #3d3d3d;
+  --cream: #fffbf7;
+}
+
+.MarketingIndex {
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+  min-height: 100vh;
+  padding: 40px;
+}
+
+.MarketingIndex__header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.MarketingIndex__title {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--saffron);
+  margin-bottom: 10px;
+}
+
+.MarketingIndex__subtitle {
+  font-size: 18px;
+  color: var(--dark-brown);
+  margin-bottom: 5px;
+}
+
+.MarketingIndex__urlHighlight {
+  background: var(--saffron);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: 700;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.MarketingIndex__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.MarketingIndex__card {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: inherit;
+  display: block;
+  border: 0;
+  text-align: left;
+  cursor: pointer;
+}
+
+.MarketingIndex__card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.MarketingIndex__cardIcon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.MarketingIndex__cardTitle {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--dark-brown);
+  margin-bottom: 10px;
+}
+
+.MarketingIndex__cardDescription {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.MarketingIndex__cardLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 15px;
+  color: var(--saffron);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.MarketingIndex__footer {
+  text-align: center;
+  margin-top: 50px;
+  color: #888;
+  font-size: 13px;
+}
+
+.MarketingIndex__footerLink {
+  color: var(--saffron);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+

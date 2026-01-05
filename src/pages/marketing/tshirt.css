@@ -1,0 +1,262 @@
+:root {
+  --saffron: #c96b4b;
+  --saffron-light: #e8a88a;
+  --dark-brown: #3d3d3d;
+  --cream: #fffbf7;
+}
+
+.MarketingTshirt {
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #e8e8e8;
+  padding: 40px;
+  min-height: 100vh;
+}
+
+.MarketingTshirt__pageTitle {
+  text-align: center;
+  font-size: 28px;
+  color: var(--dark-brown);
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.MarketingTshirt__sectionTitle {
+  font-size: 20px;
+  color: var(--dark-brown);
+  margin: 40px 0 25px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--saffron-light);
+}
+
+.MarketingTshirt__row {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.MarketingTshirt__container {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+}
+
+.MarketingTshirt__label {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* T-Shirt Shape */
+.MarketingTshirt__tshirt {
+  width: 300px;
+  height: 380px;
+  position: relative;
+  margin: 0 auto;
+}
+
+.MarketingTshirt__tshirtBody {
+  width: 100%;
+  height: 100%;
+  background: var(--saffron);
+  border-radius: 0 0 20px 20px;
+  position: relative;
+  clip-path: polygon(0% 15%, 15% 15%, 20% 0%, 80% 0%, 85% 15%, 100% 15%, 100% 100%, 0% 100%);
+}
+
+.MarketingTshirt__tshirtWhite .MarketingTshirt__tshirtBody {
+  background: white;
+  border: 3px solid #e0e0e0;
+}
+
+/* Collar */
+.MarketingTshirt__collar {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 25px;
+  background: var(--saffron);
+  border-radius: 0 0 40px 40px;
+  border-top: 4px solid rgba(0, 0, 0, 0.1);
+}
+
+.MarketingTshirt__tshirtWhite .MarketingTshirt__collar {
+  background: white;
+  border: 3px solid #e0e0e0;
+  border-top: none;
+}
+
+/* Print Area */
+.MarketingTshirt__printArea {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  text-align: center;
+}
+
+.MarketingTshirt__logoCircle {
+  width: 70px;
+  height: 70px;
+  background: white;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.MarketingTshirt__tshirtWhite .MarketingTshirt__logoCircle {
+  background: var(--saffron);
+}
+
+.MarketingTshirt__brand {
+  font-size: 12px;
+  letter-spacing: 2px;
+  color: white;
+  margin-bottom: 5px;
+}
+
+.MarketingTshirt__tshirtWhite .MarketingTshirt__brand {
+  color: var(--saffron);
+}
+
+.MarketingTshirt__mainText {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 18px;
+  color: white;
+  line-height: 1.4;
+}
+
+.MarketingTshirt__tshirtWhite .MarketingTshirt__mainText {
+  color: var(--dark-brown);
+}
+
+/* Back Print */
+.MarketingTshirt__backPrint {
+  position: absolute;
+  top: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 220px;
+  text-align: center;
+}
+
+.MarketingTshirt__backTitle {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 16px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.MarketingTshirt__tshirtWhite .MarketingTshirt__backTitle {
+  color: var(--dark-brown);
+}
+
+.MarketingTshirt__features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.MarketingTshirt__feature {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 11px;
+  color: white;
+}
+
+.MarketingTshirt__tshirtWhite .MarketingTshirt__feature {
+  background: var(--saffron);
+  color: white;
+}
+
+.MarketingTshirt__qrBox {
+  width: 100px;
+  height: 100px;
+  background: white;
+  border-radius: 12px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.MarketingTshirt__tshirtWhite .MarketingTshirt__qrBox {
+  border: 2px solid var(--saffron-light);
+}
+
+.MarketingTshirt__url {
+  font-size: 14px;
+  font-weight: 700;
+  color: white;
+}
+
+.MarketingTshirt__tshirtWhite .MarketingTshirt__url {
+  color: var(--saffron);
+}
+
+.MarketingTshirt__logoPlaceholder {
+  font-size: 9px;
+  color: var(--saffron);
+}
+
+.MarketingTshirt__tshirtWhite .MarketingTshirt__logoPlaceholder {
+  color: white;
+}
+
+.MarketingTshirt__qrPlaceholder {
+  font-size: 10px;
+  color: #999;
+}
+
+.MarketingTshirt__specsWrap {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.MarketingTshirt__specs {
+  flex: 1;
+  min-width: 280px;
+  margin-top: 30px;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 12px;
+}
+
+.MarketingTshirt__specs h3 {
+  font-size: 14px;
+  color: var(--dark-brown);
+  margin-bottom: 10px;
+}
+
+.MarketingTshirt__specs ul {
+  list-style: none;
+  font-size: 12px;
+  color: #666;
+  padding: 0;
+  margin: 0;
+}
+
+.MarketingTshirt__specs li {
+  padding: 5px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.MarketingTshirt__specs li:last-child {
+  border-bottom: none;
+}
+
+

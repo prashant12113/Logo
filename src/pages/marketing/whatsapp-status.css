@@ -1,0 +1,567 @@
+:root {
+  --saffron: #c96b4b;
+  --saffron-light: #e8a88a;
+  --saffron-pale: #fff5f0;
+  --dark-brown: #3d3d3d;
+  --cream: #fffbf7;
+  --white: #ffffff;
+  --red: #d32f2f;
+  --orange: #ff8f00;
+}
+
+.MarketingWhatsapp {
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #e8e8e8;
+  padding: 40px;
+  min-height: 100vh;
+}
+
+.MarketingWhatsapp__pageTitle {
+  text-align: center;
+  font-size: 28px;
+  color: var(--dark-brown);
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.MarketingWhatsapp__pageSubtitle {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.MarketingWhatsapp__sectionTitle {
+  font-size: 20px;
+  color: var(--dark-brown);
+  margin: 50px 0 25px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--saffron-light);
+}
+
+.MarketingWhatsapp__imagesRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: flex-start;
+}
+
+.MarketingWhatsapp__imageContainer {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.MarketingWhatsapp__imageLabel {
+  text-align: center;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* ============ WHATSAPP STATUS (1080x1920 - 9:16) ============ */
+.MarketingWhatsapp__waStatus {
+  width: 270px;
+  height: 480px;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.MarketingWhatsapp__statusGeneral {
+  background: linear-gradient(180deg, var(--saffron) 0%, #a0522d 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 25px;
+}
+
+.MarketingWhatsapp__statusGeneral::before {
+  content: '🕉️';
+  position: absolute;
+  font-size: 200px;
+  opacity: 0.05;
+  top: 20%;
+}
+
+.MarketingWhatsapp__logoCircle {
+  width: 70px;
+  height: 70px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.MarketingWhatsapp__logoPlaceholder {
+  font-size: 8px;
+  color: var(--saffron);
+  text-align: center;
+}
+
+.MarketingWhatsapp__mainTitle {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 26px;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.MarketingWhatsapp__features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 25px;
+  z-index: 1;
+}
+
+.MarketingWhatsapp__feature {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  color: white;
+}
+
+.MarketingWhatsapp__qrBox {
+  width: 110px;
+  height: 110px;
+  background: white;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.MarketingWhatsapp__qrPlaceholder {
+  font-size: 10px;
+  color: #999;
+  text-align: center;
+}
+
+.MarketingWhatsapp__urlWhite {
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  z-index: 1;
+}
+
+.MarketingWhatsapp__swipeHint {
+  position: absolute;
+  bottom: 20px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Status 2: Medical */
+.MarketingWhatsapp__statusMedical {
+  background: linear-gradient(180deg, var(--red) 0%, #b71c1c 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 25px;
+}
+
+.MarketingWhatsapp__iconBig {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.MarketingWhatsapp__mainTitleMedical {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 28px;
+  color: white;
+  text-align: center;
+  margin-bottom: 15px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.MarketingWhatsapp__subtitleMedical {
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.MarketingWhatsapp__saveHint {
+  position: absolute;
+  bottom: 20px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(0, 0, 0, 0.2);
+  padding: 8px 15px;
+  border-radius: 15px;
+}
+
+/* Status 3: Food */
+.MarketingWhatsapp__statusFood {
+  background: linear-gradient(180deg, var(--orange) 0%, #f57c00 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 25px;
+}
+
+.MarketingWhatsapp__mainTitleFood {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.MarketingWhatsapp__subtitleFood {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.95);
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.MarketingWhatsapp__badge {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 13px;
+  color: white;
+}
+
+/* Status 4: Minimal Dark */
+.MarketingWhatsapp__statusDark {
+  background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 25px;
+}
+
+.MarketingWhatsapp__logoCircleDark {
+  width: 80px;
+  height: 80px;
+  background: var(--saffron);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  box-shadow: 0 0 40px rgba(201, 107, 75, 0.4);
+}
+
+.MarketingWhatsapp__brand {
+  font-size: 14px;
+  color: var(--saffron-light);
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.MarketingWhatsapp__mainTitleDark {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 26px;
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.MarketingWhatsapp__qrBoxDark {
+  width: 130px;
+  height: 130px;
+  background: white;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.MarketingWhatsapp__urlSaffron {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--saffron);
+}
+
+/* ============ SQUARE IMAGES (1:1) ============ */
+.MarketingWhatsapp__squareImage {
+  width: 350px;
+  height: 350px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.MarketingWhatsapp__squareGeneral {
+  background: linear-gradient(135deg, var(--saffron) 0%, #a0522d 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  position: relative;
+}
+
+.MarketingWhatsapp__squareGeneral::before {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  top: -50px;
+  right: -50px;
+}
+
+.MarketingWhatsapp__logoCircleSquare {
+  width: 55px;
+  height: 55px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  z-index: 1;
+}
+
+.MarketingWhatsapp__squareTitle {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 24px;
+  color: white;
+  text-align: center;
+  margin-bottom: 20px;
+  z-index: 1;
+}
+
+.MarketingWhatsapp__squareQrBox {
+  width: 100px;
+  height: 100px;
+  background: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  z-index: 1;
+}
+
+.MarketingWhatsapp__squareFeatures {
+  background: var(--cream);
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+  position: relative;
+}
+
+.MarketingWhatsapp__featuresHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.MarketingWhatsapp__logoCircleSmall {
+  width: 40px;
+  height: 40px;
+  background: var(--saffron);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.MarketingWhatsapp__brandName {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--saffron);
+}
+
+.MarketingWhatsapp__featuresTitle {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 22px;
+  color: var(--dark-brown);
+  margin-bottom: 15px;
+}
+
+.MarketingWhatsapp__featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.MarketingWhatsapp__featureCard {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.MarketingWhatsapp__featureIcon {
+  font-size: 22px;
+  margin-bottom: 5px;
+}
+
+.MarketingWhatsapp__featureText {
+  font-size: 11px;
+  color: var(--dark-brown);
+}
+
+.MarketingWhatsapp__featuresFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.MarketingWhatsapp__urlSaffronSmall {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--saffron);
+}
+
+.MarketingWhatsapp__qrSmall {
+  width: 60px;
+  height: 60px;
+  background: white;
+  border: 2px solid var(--saffron-light);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.MarketingWhatsapp__squareMedical {
+  background: linear-gradient(135deg, var(--red) 0%, #b71c1c 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.MarketingWhatsapp__squareMedicalTitle {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.MarketingWhatsapp__squareMedicalSubtitle {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.MarketingWhatsapp__squareMedicalQr {
+  width: 90px;
+  height: 90px;
+  background: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+/* Forward Cards */
+.MarketingWhatsapp__forwardCard {
+  width: 400px;
+  height: 200px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  padding: 25px;
+  gap: 25px;
+}
+
+.MarketingWhatsapp__forwardCardSaffron {
+  background: linear-gradient(135deg, var(--saffron) 0%, #a0522d 100%);
+}
+
+.MarketingWhatsapp__forwardTitle {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 20px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.MarketingWhatsapp__forwardSubtitle {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 15px;
+}
+
+.MarketingWhatsapp__forwardUrl {
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+}
+
+.MarketingWhatsapp__forwardQr {
+  width: 100px;
+  height: 100px;
+  background: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.MarketingWhatsapp__forwardCardRed {
+  background: linear-gradient(135deg, var(--red) 0%, #b71c1c 100%);
+}
+
+.MarketingWhatsapp__forwardTitleSm {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 18px;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.MarketingWhatsapp__forwardSubtitleSm {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 12px;
+}
+
+.MarketingWhatsapp__forwardQrSm {
+  width: 90px;
+  height: 90px;
+  background: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Print */
+@media print {
+  .MarketingWhatsapp {
+    background: white;
+  }
+  .MarketingWhatsapp__pageTitle,
+  .MarketingWhatsapp__pageSubtitle,
+  .MarketingWhatsapp__sectionTitle,
+  .MarketingWhatsapp__imageLabel {
+    display: none;
+  }
+}
+
+

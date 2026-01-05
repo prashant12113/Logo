@@ -1,0 +1,630 @@
+:root {
+  --saffron: #c96b4b;
+  --saffron-light: #e8a88a;
+  --saffron-pale: #fff5f0;
+  --dark-brown: #3d3d3d;
+  --cream: #fffbf7;
+  --white: #ffffff;
+}
+
+.MarketingFlyers {
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: #f0f0f0;
+  padding: 40px;
+  min-height: 100vh;
+}
+
+.MarketingFlyers__pageTitle {
+  text-align: center;
+  font-size: 28px;
+  color: var(--dark-brown);
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.MarketingFlyers__designsGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: center;
+}
+
+.MarketingFlyers__designContainer {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.MarketingFlyers__designLabel {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+/* A5 Flyer - 148mm x 210mm at 96dpi ≈ 560px x 794px */
+.MarketingFlyers__flyer {
+  width: 560px;
+  height: max-content;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ============ FLYER 1: GENERAL PURPOSE ============ */
+.MarketingFlyers__flyerGeneral {
+  background: linear-gradient(180deg, var(--cream) 0%, var(--saffron-pale) 100%);
+}
+
+.MarketingFlyers__header {
+  background: var(--saffron);
+  padding: 25px 30px;
+  text-align: center;
+  position: relative;
+}
+
+.MarketingFlyers__header::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background: var(--saffron);
+  clip-path: ellipse(50% 100% at 50% 0%);
+}
+
+.MarketingFlyers__logoArea {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 10px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.MarketingFlyers__logoPlaceholder {
+  font-size: 10px;
+  color: var(--saffron);
+  text-align: center;
+}
+
+.MarketingFlyers__mainTitle {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 32px;
+  color: white;
+  margin-top: 10px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.MarketingFlyers__subtitle {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 5px;
+}
+
+.MarketingFlyers__content {
+  padding: 50px 30px 30px;
+  margin-bottom: 40px;
+}
+
+.MarketingFlyers__tagline {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 26px;
+  color: var(--dark-brown);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.MarketingFlyers__featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.MarketingFlyers__featureItem {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+.MarketingFlyers__featureIcon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.MarketingFlyers__featureText {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 14px;
+  color: var(--dark-brown);
+}
+
+.MarketingFlyers__featureTextEn {
+  font-size: 11px;
+  color: #888;
+}
+
+.MarketingFlyers__qrSection {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.MarketingFlyers__qrBox {
+  width: 140px;
+  height: 140px;
+  background: #f5f5f5;
+  border: 3px dashed var(--saffron-light);
+  border-radius: 12px;
+  margin: 0 auto 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  color: #999;
+}
+
+.MarketingFlyers__scanText {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 18px;
+  color: var(--dark-brown);
+}
+
+.MarketingFlyers__url {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--saffron);
+  margin-top: 8px;
+}
+
+.MarketingFlyers__footer {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.MarketingFlyers__badge {
+  background: var(--saffron);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.MarketingFlyers__bottomNote {
+  background: var(--saffron);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 16px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/* ============ FLYER 2: MEDICAL EMERGENCY ============ */
+.MarketingFlyers__flyerMedical {
+  background: linear-gradient(180deg, #fff5f5 0%, #ffe8e8 100%);
+}
+
+.MarketingFlyers__emergencyHeader {
+  background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%);
+  padding: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.MarketingFlyers__emergencyIcon {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.MarketingFlyers__emergencyTitle {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 34px;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.MarketingFlyers__emergencySubtitle {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 8px;
+}
+
+.MarketingFlyers__pulseRing {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  animation: MarketingFlyersPulse 2s infinite;
+}
+
+@keyframes MarketingFlyersPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+.MarketingFlyers__servicesTitle {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 22px;
+  color: var(--dark-brown);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.MarketingFlyers__serviceList {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.MarketingFlyers__serviceItem {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.MarketingFlyers__serviceItem:last-child {
+  border-bottom: none;
+}
+
+.MarketingFlyers__serviceIcon {
+  width: 45px;
+  height: 45px;
+  background: #ffe8e8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-right: 15px;
+}
+
+.MarketingFlyers__serviceText {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 18px;
+  color: var(--dark-brown);
+}
+
+.MarketingFlyers__serviceTextEn {
+  font-size: 12px;
+  color: #888;
+}
+
+.MarketingFlyers__qrSectionMedical {
+  border: 3px solid #d32f2f;
+}
+
+.MarketingFlyers__qrTitle {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 20px;
+  color: #d32f2f;
+  margin-bottom: 15px;
+}
+
+.MarketingFlyers__qrBoxMedical {
+  width: 130px;
+  height: 130px;
+  border: 3px dashed #d32f2f;
+}
+
+.MarketingFlyers__urlMedical {
+  color: #d32f2f;
+}
+
+.MarketingFlyers__bottomWarning {
+  background: #d32f2f;
+  color: white;
+  text-align: center;
+  padding: 15px 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.MarketingFlyers__warningText {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 14px;
+}
+
+/* ============ FLYER 3: BHANDARA/FOOD ============ */
+.MarketingFlyers__flyerFood {
+  background: linear-gradient(180deg, #fff8e1 0%, #ffecb3 100%);
+}
+
+.MarketingFlyers__foodHeader {
+  background: linear-gradient(135deg, #ff8f00 0%, #f57c00 100%);
+  padding: 30px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.MarketingFlyers__foodHeader::before {
+  content: '🍽️';
+  position: absolute;
+  font-size: 100px;
+  opacity: 0.1;
+  top: -20px;
+  right: -20px;
+}
+
+.MarketingFlyers__foodIcon {
+  font-size: 55px;
+  margin-bottom: 10px;
+}
+
+.MarketingFlyers__foodTitle {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 38px;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.MarketingFlyers__infoCard {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  margin-bottom: 25px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.MarketingFlyers__infoNumber {
+  font-size: 48px;
+  font-weight: 900;
+  color: #ff8f00;
+}
+
+.MarketingFlyers__infoText {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 22px;
+  color: var(--dark-brown);
+}
+
+.MarketingFlyers__infoSubtext {
+  font-size: 14px;
+  color: #888;
+  margin-top: 5px;
+}
+
+.MarketingFlyers__benefits {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 25px;
+}
+
+.MarketingFlyers__benefit {
+  text-align: center;
+}
+
+.MarketingFlyers__benefitIcon {
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin: 0 auto 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.MarketingFlyers__benefitText {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 13px;
+  color: var(--dark-brown);
+}
+
+.MarketingFlyers__qrPrompt {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 20px;
+  color: var(--dark-brown);
+  margin-bottom: 15px;
+}
+
+.MarketingFlyers__qrBoxFood {
+  width: 130px;
+  height: 130px;
+  background: #fff8e1;
+  border: 3px dashed #ff8f00;
+}
+
+.MarketingFlyers__urlFood {
+  color: #ff8f00;
+}
+
+.MarketingFlyers__footerBadges {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.MarketingFlyers__badgeFood {
+  background: #ff8f00;
+}
+
+.MarketingFlyers__bottomBar {
+  background: #ff8f00;
+  color: white;
+  text-align: center;
+  padding: 12px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 16px;
+}
+
+/* ============ FLYER 4: KALPVASI/SPIRITUAL ============ */
+.MarketingFlyers__flyerSpiritual {
+  background: linear-gradient(180deg, #fff3e0 0%, #ffe0b2 100%);
+  position: relative;
+}
+
+.MarketingFlyers__flyerSpiritual::before {
+  content: '🕉️';
+  position: absolute;
+  font-size: 300px;
+  opacity: 0.03;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.MarketingFlyers__spiritualHeader {
+  background: linear-gradient(135deg, var(--saffron) 0%, #a0522d 100%);
+  padding: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.MarketingFlyers__omSymbol {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.MarketingFlyers__spiritualTitle {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 32px;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.MarketingFlyers__spiritualSubtitle {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 5px;
+}
+
+.MarketingFlyers__contentSpiritual {
+  position: relative;
+  z-index: 1;
+}
+
+.MarketingFlyers__offeringTitle {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 22px;
+  color: var(--dark-brown);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.MarketingFlyers__offerings {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  margin-bottom: 25px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.MarketingFlyers__offeringItem {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.MarketingFlyers__offeringItem:last-child {
+  border-bottom: none;
+}
+
+.MarketingFlyers__offeringIcon {
+  width: 45px;
+  height: 45px;
+  background: var(--saffron-pale);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin-right: 15px;
+}
+
+.MarketingFlyers__offeringText {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 17px;
+  color: var(--dark-brown);
+}
+
+.MarketingFlyers__qrSectionSpiritual {
+  border: 2px solid var(--saffron-light);
+}
+
+.MarketingFlyers__qrBoxSpiritual {
+  width: 120px;
+  height: 120px;
+  background: var(--saffron-pale);
+  border: 3px dashed var(--saffron);
+}
+
+.MarketingFlyers__bottomBlessing {
+  background: var(--saffron);
+  color: white;
+  text-align: center;
+  padding: 15px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.MarketingFlyers__blessingText {
+  font-family: 'Tiro Devanagari Hindi', serif;
+  font-size: 16px;
+}
+
+/* Print styles (kept, scoped) */
+@media print {
+  .MarketingFlyers {
+    background: white;
+    padding: 0;
+  }
+  .MarketingFlyers__pageTitle,
+  .MarketingFlyers__designLabel {
+    display: none;
+  }
+  .MarketingFlyers__designContainer {
+    box-shadow: none;
+    padding: 0;
+    page-break-after: always;
+  }
+  .MarketingFlyers__flyer {
+    width: 148mm;
+    height: 210mm;
+  }
+}
+
+
