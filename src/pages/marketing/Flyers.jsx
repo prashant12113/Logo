@@ -12,7 +12,7 @@ export default function Flyers() {
           <div className="MarketingFlyers__flyer MarketingFlyers__flyerGeneral">
             <div className="MarketingFlyers__header">
               <div className="MarketingFlyers__logoArea">
-                <div className="MarketingFlyers__logoPlaceholder"><img src="/src/chowk-icon.svg" alt="Bhandara Chowk Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
+                <div className="MarketingFlyers__logoPlaceholder"><img src="/chowk-icon.svg" alt="Bhandara Chowk Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
               </div>
               <div className="MarketingFlyers__mainTitle">भंडारा चौक</div>
               <div className="MarketingFlyers__subtitle">BHANDARA CHOWK</div>

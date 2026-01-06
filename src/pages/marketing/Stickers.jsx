@@ -13,7 +13,7 @@ export default function Stickers() {
         <div className="MarketingStickers__container">
           <div className="MarketingStickers__label">General - Saffron</div>
           <div className="MarketingStickers__sticker7 MarketingStickers__stickerGeneral">
-            <div className="MarketingStickers__logoCircle"><img src="/src/chowk-icon.svg" alt="Bhandara Chowk Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
+            <div className="MarketingStickers__logoCircle"><img src="/chowk-icon.svg" alt="Bhandara Chowk Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
             <div className="MarketingStickers__qrBox"><img src="/qr/frame.jpg" alt="QR Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
             <div className="MarketingStickers__textHindi">कहाँ है? Scan करो!</div>
             <div className="MarketingStickers__urlWhite">bhandarachowk.in</div>
@@ -62,7 +62,7 @@ export default function Stickers() {
         <div className="MarketingStickers__container">
           <div className="MarketingStickers__label">Minimal - White</div>
           <div className="MarketingStickers__sticker7 MarketingStickers__stickerMinimal">
-            <div className="MarketingStickers__logoCircleMinimal"><img src="/src/chowk-icon.svg" alt="Bhandara Chowk Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
+            <div className="MarketingStickers__logoCircleMinimal"><img src="/chowk-icon.svg" alt="Bhandara Chowk Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
             <div className="MarketingStickers__qrBoxMinimal"><img src="/qr/frame.jpg" alt="QR Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
             <div className="MarketingStickers__textHindiMinimal">माघ मेला Guide</div>
             <div className="MarketingStickers__urlSaffron">bhandarachowk.in</div>
@@ -115,7 +115,7 @@ export default function Stickers() {
           <div className="MarketingStickers__label">Large Saffron</div>
           <div className="MarketingStickers__sticker10">
             <div className="MarketingStickers__large">
-              <div className="MarketingStickers__logoCircleLarge"><img src="/src/chowk-icon.svg" alt="Bhandara Chowk Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
+              <div className="MarketingStickers__logoCircleLarge"><img src="/chowk-icon.svg" alt="Bhandara Chowk Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
               <div className="MarketingStickers__titleLarge">माघ मेले में कुछ भी खोजें!</div>
               <div className="MarketingStickers__qrBoxLarge"><img src="/qr/frame.jpg" alt="QR Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
               <div className="MarketingStickers__subtitleLarge">📱 Scan करें या खोलें:</div>
@@ -164,7 +164,7 @@ export default function Stickers() {
           <div className="MarketingStickers__teaCard">
             <div className="MarketingStickers__teaCardDesign">
               <div className="MarketingStickers__teaLeft">
-                <div className="MarketingStickers__logoSmall"><img src="/src/chowk-icon.svg" alt="Bhandara Chowk Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
+                <div className="MarketingStickers__logoSmall"><img src="/chowk-icon.svg" alt="Bhandara Chowk Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
                 <div className="MarketingStickers__teaTitle">
                   माघ मेले में
                   <br />

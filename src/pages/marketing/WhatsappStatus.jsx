@@ -14,7 +14,7 @@ export default function WhatsappStatus() {
           <div className="MarketingWhatsapp__imageLabel">Status 1: General</div>
           <div className="MarketingWhatsapp__waStatus MarketingWhatsapp__statusGeneral">
             <div className="MarketingWhatsapp__logoCircle">
-              <div className="MarketingWhatsapp__logoPlaceholder"><img src="/src/chowk-icon.svg" alt="Bhandara Chowk Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
+              <div className="MarketingWhatsapp__logoPlaceholder"><img src="/chowk-icon.svg" alt="Bhandara Chowk Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
             </div>
             <div className="MarketingWhatsapp__mainTitle">
               माघ मेले में
@@ -78,7 +78,7 @@ export default function WhatsappStatus() {
           <div className="MarketingWhatsapp__waStatus MarketingWhatsapp__statusDark">
             <div className="MarketingWhatsapp__logoCircleDark">
               <div className="MarketingWhatsapp__logoPlaceholder" style={{ color: 'white' }}>
-                <img src="/src/chowk-icon.svg" alt="Bhandara Chowk Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                <img src="/chowk-icon.svg" alt="Bhandara Chowk Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
               </div>
             </div>
             <div className="MarketingWhatsapp__brand">BHANDARA CHOWK</div>
@@ -101,7 +101,7 @@ export default function WhatsappStatus() {
           <div className="MarketingWhatsapp__imageLabel">Square 1: General Saffron</div>
           <div className="MarketingWhatsapp__squareImage MarketingWhatsapp__squareGeneral">
             <div className="MarketingWhatsapp__logoCircleSquare">
-              <div className="MarketingWhatsapp__logoPlaceholder"><img src="/src/chowk-icon.svg" alt="Bhandara Chowk Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
+              <div className="MarketingWhatsapp__logoPlaceholder"><img src="/chowk-icon.svg" alt="Bhandara Chowk Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
             </div>
             <div className="MarketingWhatsapp__squareTitle">
               माघ मेले में
@@ -124,7 +124,7 @@ export default function WhatsappStatus() {
                   className="MarketingWhatsapp__logoPlaceholder"
                   style={{ color: 'white', fontSize: 7 }}
                 >
-                  <img src="/src/chowk-icon.svg" alt="Bhandara Chowk Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                  <img src="/chowk-icon.svg" alt="Bhandara Chowk Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                 </div>
               </div>
               <div className="MarketingWhatsapp__brandName">BHANDARA CHOWK</div>
