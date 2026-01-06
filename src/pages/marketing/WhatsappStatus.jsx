@@ -14,7 +14,7 @@ export default function WhatsappStatus() {
           <div className="MarketingWhatsapp__imageLabel">Status 1: General</div>
           <div className="MarketingWhatsapp__waStatus MarketingWhatsapp__statusGeneral">
             <div className="MarketingWhatsapp__logoCircle">
-              <div className="MarketingWhatsapp__logoPlaceholder">[LOGO]</div>
+              <div className="MarketingWhatsapp__logoPlaceholder"><img src="/src/chowk-icon.svg" alt="Bhandara Chowk Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
             </div>
             <div className="MarketingWhatsapp__mainTitle">
               माघ मेले में
@@ -28,7 +28,7 @@ export default function WhatsappStatus() {
               <span className="MarketingWhatsapp__feature">📍 संगम</span>
             </div>
             <div className="MarketingWhatsapp__qrBox">
-              <div className="MarketingWhatsapp__qrPlaceholder">[QR CODE]</div>
+              <div className="MarketingWhatsapp__qrPlaceholder"><img src="/qr/frame.jpg" alt="QR Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
             </div>
             <div className="MarketingWhatsapp__urlWhite">bhandarachowk.in</div>
             <div className="MarketingWhatsapp__swipeHint">↑ Link open करें</div>
@@ -50,7 +50,7 @@ export default function WhatsappStatus() {
               Medical Camp खोजें
             </div>
             <div className="MarketingWhatsapp__qrBox">
-              <div className="MarketingWhatsapp__qrPlaceholder">[QR CODE]</div>
+              <div className="MarketingWhatsapp__qrPlaceholder"><img src="/qr/frame.jpg" alt="QR Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
             </div>
             <div className="MarketingWhatsapp__urlWhite">bhandarachowk.in</div>
             <div className="MarketingWhatsapp__saveHint">⚠️ Screenshot लेकर SAVE करें</div>
@@ -64,7 +64,7 @@ export default function WhatsappStatus() {
             <div className="MarketingWhatsapp__mainTitleFood">भूख लगी है?</div>
             <div className="MarketingWhatsapp__subtitleFood">माघ मेले में 100+ भंडारे!</div>
             <div className="MarketingWhatsapp__qrBox">
-              <div className="MarketingWhatsapp__qrPlaceholder">[QR CODE]</div>
+              <div className="MarketingWhatsapp__qrPlaceholder"><img src="/qr/frame.jpg" alt="QR Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
             </div>
             <div className="MarketingWhatsapp__urlWhite" style={{ marginBottom: 15 }}>
               bhandarachowk.in
@@ -78,7 +78,7 @@ export default function WhatsappStatus() {
           <div className="MarketingWhatsapp__waStatus MarketingWhatsapp__statusDark">
             <div className="MarketingWhatsapp__logoCircleDark">
               <div className="MarketingWhatsapp__logoPlaceholder" style={{ color: 'white' }}>
-                [LOGO]
+                <img src="/src/chowk-icon.svg" alt="Bhandara Chowk Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
               </div>
             </div>
             <div className="MarketingWhatsapp__brand">BHANDARA CHOWK</div>
@@ -88,7 +88,7 @@ export default function WhatsappStatus() {
               Guide
             </div>
             <div className="MarketingWhatsapp__qrBoxDark">
-              <div className="MarketingWhatsapp__qrPlaceholder">[QR CODE]</div>
+              <div className="MarketingWhatsapp__qrPlaceholder"><img src="/qr/frame.jpg" alt="QR Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
             </div>
             <div className="MarketingWhatsapp__urlSaffron">bhandarachowk.in</div>
           </div>
@@ -101,7 +101,7 @@ export default function WhatsappStatus() {
           <div className="MarketingWhatsapp__imageLabel">Square 1: General Saffron</div>
           <div className="MarketingWhatsapp__squareImage MarketingWhatsapp__squareGeneral">
             <div className="MarketingWhatsapp__logoCircleSquare">
-              <div className="MarketingWhatsapp__logoPlaceholder">[LOGO]</div>
+              <div className="MarketingWhatsapp__logoPlaceholder"><img src="/src/chowk-icon.svg" alt="Bhandara Chowk Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
             </div>
             <div className="MarketingWhatsapp__squareTitle">
               माघ मेले में
@@ -109,7 +109,7 @@ export default function WhatsappStatus() {
               कुछ भी खोजें!
             </div>
             <div className="MarketingWhatsapp__squareQrBox">
-              <div className="MarketingWhatsapp__qrPlaceholder">[QR CODE]</div>
+              <div className="MarketingWhatsapp__qrPlaceholder"><img src="/qr/frame.jpg" alt="QR Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
             </div>
             <div className="MarketingWhatsapp__urlWhite">bhandarachowk.in</div>
           </div>
@@ -124,7 +124,7 @@ export default function WhatsappStatus() {
                   className="MarketingWhatsapp__logoPlaceholder"
                   style={{ color: 'white', fontSize: 7 }}
                 >
-                  [LOGO]
+                  <img src="/src/chowk-icon.svg" alt="Bhandara Chowk Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                 </div>
               </div>
               <div className="MarketingWhatsapp__brandName">BHANDARA CHOWK</div>
@@ -152,7 +152,7 @@ export default function WhatsappStatus() {
               <div className="MarketingWhatsapp__urlSaffronSmall">bhandarachowk.in</div>
               <div className="MarketingWhatsapp__qrSmall">
                 <div className="MarketingWhatsapp__qrPlaceholder" style={{ fontSize: 8 }}>
-                  [QR]
+                  <img src="/qr/frame.jpg" alt="QR Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                 </div>
               </div>
             </div>
@@ -168,7 +168,7 @@ export default function WhatsappStatus() {
               Free Consultation • Free Medicines
             </div>
             <div className="MarketingWhatsapp__squareMedicalQr">
-              <div className="MarketingWhatsapp__qrPlaceholder">[QR CODE]</div>
+              <div className="MarketingWhatsapp__qrPlaceholder"><img src="/qr/frame.jpg" alt="QR Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
             </div>
             <div className="MarketingWhatsapp__urlWhite">bhandarachowk.in</div>
           </div>
@@ -188,7 +188,7 @@ export default function WhatsappStatus() {
               <div className="MarketingWhatsapp__forwardUrl">bhandarachowk.in</div>
             </div>
             <div className="MarketingWhatsapp__forwardQr">
-              <div className="MarketingWhatsapp__qrPlaceholder">[QR CODE]</div>
+              <div className="MarketingWhatsapp__qrPlaceholder"><img src="/qr/frame.jpg" alt="QR Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
             </div>
           </div>
         </div>
@@ -203,7 +203,7 @@ export default function WhatsappStatus() {
               <div className="MarketingWhatsapp__forwardUrl">bhandarachowk.in</div>
             </div>
             <div className="MarketingWhatsapp__forwardQrSm">
-              <div className="MarketingWhatsapp__qrPlaceholder">[QR]</div>
+              <div className="MarketingWhatsapp__qrPlaceholder"><img src="/qr/frame.jpg" alt="QR Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
             </div>
           </div>
         </div>
