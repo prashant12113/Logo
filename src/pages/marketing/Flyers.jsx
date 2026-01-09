@@ -12,7 +12,7 @@ export default function Flyers() {
           <div className="MarketingFlyers__flyer MarketingFlyers__flyerGeneral">
             <div className="MarketingFlyers__header">
               <div className="MarketingFlyers__logoArea">
-                <div className="MarketingFlyers__logoPlaceholder"><img src="/chowk-icon.svg" alt="Bhandara Chowk Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
+                <div className="MarketingFlyers__logoPlaceholder"><img src={`${import.meta.env.BASE_URL}chowk-icon.svg`} alt="Bhandara Chowk Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
               </div>
               <div className="MarketingFlyers__mainTitle">भंडारा चौक</div>
               <div className="MarketingFlyers__subtitle">BHANDARA CHOWK</div>
@@ -55,7 +55,7 @@ export default function Flyers() {
               </div>
 
               <div className="MarketingFlyers__qrSection">
-                <div className="MarketingFlyers__qrBox"><img src="/qr/frame.jpg" alt="QR Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
+                <div className="MarketingFlyers__qrBox"><img src={`${import.meta.env.BASE_URL}qr/frame.jpg`} alt="QR Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
                 <div className="MarketingFlyers__scanText">📱 Scan करें या खोलें:</div>
                 <div className="MarketingFlyers__url">bhandarachowk.in</div>
               </div>
@@ -118,7 +118,7 @@ export default function Flyers() {
 
               <div className="MarketingFlyers__qrSection MarketingFlyers__qrSectionMedical">
                 <div className="MarketingFlyers__qrTitle">तुरंत नज़दीकी Medical Camp खोजें:</div>
-                <div className="MarketingFlyers__qrBox MarketingFlyers__qrBoxMedical"><img src="/qr/frame.jpg" alt="QR Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
+                <div className="MarketingFlyers__qrBox MarketingFlyers__qrBoxMedical"><img src={`${import.meta.env.BASE_URL}qr/frame.jpg`} alt="QR Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
                 <div className="MarketingFlyers__url MarketingFlyers__urlMedical">bhandarachowk.in</div>
               </div>
             </div>
@@ -176,7 +176,7 @@ export default function Flyers() {
 
               <div className="MarketingFlyers__qrSection">
                 <div className="MarketingFlyers__qrPrompt">अभी खोजें:</div>
-                <div className="MarketingFlyers__qrBox MarketingFlyers__qrBoxFood"><img src="/qr/frame.jpg" alt="QR Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
+                <div className="MarketingFlyers__qrBox MarketingFlyers__qrBoxFood"><img src={`${import.meta.env.BASE_URL}qr/frame.jpg`} alt="QR Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
                 <div className="MarketingFlyers__url MarketingFlyers__urlFood">bhandarachowk.in</div>
 
                 <div className="MarketingFlyers__footerBadges">
@@ -229,7 +229,7 @@ export default function Flyers() {
 
               <div className="MarketingFlyers__qrSection MarketingFlyers__qrSectionSpiritual">
                 <div className="MarketingFlyers__qrTitle">सम्पूर्ण जानकारी एक स्थान पर:</div>
-                <div className="MarketingFlyers__qrBox MarketingFlyers__qrBoxSpiritual"><img src="/qr/frame.jpg" alt="QR Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
+                <div className="MarketingFlyers__qrBox MarketingFlyers__qrBoxSpiritual"><img src={`${import.meta.env.BASE_URL}qr/frame.jpg`} alt="QR Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
                 <div className="MarketingFlyers__url">bhandarachowk.in</div>
               </div>
             </div>

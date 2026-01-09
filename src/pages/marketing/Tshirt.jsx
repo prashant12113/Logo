@@ -14,7 +14,7 @@ export default function Tshirt() {
               <div className="MarketingTshirt__collar" />
               <div className="MarketingTshirt__printArea">
                 <div className="MarketingTshirt__logoCircle">
-                  <div className="MarketingTshirt__logoPlaceholder"><img src="/chowk-icon.svg" alt="Bhandara Chowk Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
+                  <div className="MarketingTshirt__logoPlaceholder"><img src={`${import.meta.env.BASE_URL}chowk-icon.svg`} alt="Bhandara Chowk Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
                 </div>
                 <div className="MarketingTshirt__brand">BHANDARA CHOWK</div>
                 <div className="MarketingTshirt__mainText">
@@ -41,7 +41,7 @@ export default function Tshirt() {
                   <span className="MarketingTshirt__feature">📍 संगम</span>
                 </div>
                 <div className="MarketingTshirt__qrBox">
-                  <div className="MarketingTshirt__qrPlaceholder"><img src="/qr/frame.jpg" alt="QR Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
+                  <div className="MarketingTshirt__qrPlaceholder"><img src={`${import.meta.env.BASE_URL}qr/frame.jpg`} alt="QR Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
                 </div>
                 <div className="MarketingTshirt__url">bhandarachowk.in</div>
               </div>
@@ -59,7 +59,7 @@ export default function Tshirt() {
               <div className="MarketingTshirt__collar" />
               <div className="MarketingTshirt__printArea">
                 <div className="MarketingTshirt__logoCircle">
-                  <div className="MarketingTshirt__logoPlaceholder"><img src="/chowk-icon.svg" alt="Bhandara Chowk Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
+                  <div className="MarketingTshirt__logoPlaceholder"><img src={`${import.meta.env.BASE_URL}chowk-icon.svg`} alt="Bhandara Chowk Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
                 </div>
                 <div className="MarketingTshirt__brand">BHANDARA CHOWK</div>
                 <div className="MarketingTshirt__mainText">
@@ -86,7 +86,7 @@ export default function Tshirt() {
                   <span className="MarketingTshirt__feature">📍 संगम</span>
                 </div>
                 <div className="MarketingTshirt__qrBox">
-                  <div className="MarketingTshirt__qrPlaceholder"><img src="/qr/frame.jpg" alt="QR Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
+                  <div className="MarketingTshirt__qrPlaceholder"><img src={`${import.meta.env.BASE_URL}qr/frame.jpg`} alt="QR Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
                 </div>
                 <div className="MarketingTshirt__url">bhandarachowk.in</div>
               </div>
