@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhandara Chowk - Volunteer T-Shirt Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:wght@400&family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --saffron: #C96B4B;
+            --saffron-light: #E8A88A;
+            --dark-brown: #3D3D3D;
+            --cream: #FFFBF7;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #e8e8e8;
+            padding: 40px;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 28px;
+            color: var(--dark-brown);
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+
+        .section-title {
+            font-size: 20px;
+            color: var(--dark-brown);
+            margin: 40px 0 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--saffron-light);
+        }
+
+        .tshirt-row {
+            display: flex;
+            gap: 50px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .tshirt-container {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+        }
+
+        .tshirt-label {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        /* T-Shirt Shape */
+        .tshirt {
+            width: 300px;
+            height: 380px;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        .tshirt-body {
+            width: 100%;
+            height: 100%;
+            background: var(--saffron);
+            border-radius: 0 0 20px 20px;
+            position: relative;
+            clip-path: polygon(
+                0% 15%,
+                15% 15%,
+                20% 0%,
+                80% 0%,
+                85% 15%,
+                100% 15%,
+                100% 100%,
+                0% 100%
+            );
+        }
+
+        .tshirt-white .tshirt-body {
+            background: white;
+            border: 3px solid #e0e0e0;
+        }
+
+        /* Collar */
+        .collar {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 25px;
+            background: var(--saffron);
+            border-radius: 0 0 40px 40px;
+            border-top: 4px solid rgba(0,0,0,0.1);
+        }
+
+        .tshirt-white .collar {
+            background: white;
+            border: 3px solid #e0e0e0;
+            border-top: none;
+        }
+
+        /* Print Area */
+        .print-area {
+            position: absolute;
+            top: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            text-align: center;
+        }
+
+        .print-area .logo-circle {
+            width: 70px;
+            height: 70px;
+            background: white;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        .tshirt-white .print-area .logo-circle {
+            background: var(--saffron);
+        }
+
+        .print-area .brand {
+            font-size: 12px;
+            letter-spacing: 2px;
+            color: white;
+            margin-bottom: 5px;
+        }
+
+        .tshirt-white .print-area .brand {
+            color: var(--saffron);
+        }
+
+        .print-area .main-text {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 18px;
+            color: white;
+            line-height: 1.4;
+        }
+
+        .tshirt-white .print-area .main-text {
+            color: var(--dark-brown);
+        }
+
+        /* Back Print */
+        .back-print {
+            position: absolute;
+            top: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 220px;
+            text-align: center;
+        }
+
+        .back-print .title {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 16px;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .tshirt-white .back-print .title {
+            color: var(--dark-brown);
+        }
+
+        .back-print .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .back-print .feature {
+            background: rgba(255,255,255,0.2);
+            padding: 6px 12px;
+            border-radius: 15px;
+            font-size: 11px;
+            color: white;
+        }
+
+        .tshirt-white .back-print .feature {
+            background: var(--saffron);
+            color: white;
+        }
+
+        .back-print .qr-box {
+            width: 100px;
+            height: 100px;
+            background: white;
+            border-radius: 12px;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        }
+
+        .tshirt-white .back-print .qr-box {
+            border: 2px solid var(--saffron-light);
+        }
+
+        .back-print .url {
+            font-size: 14px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .tshirt-white .back-print .url {
+            color: var(--saffron);
+        }
+
+        .logo-placeholder {
+            font-size: 9px;
+            color: var(--saffron);
+        }
+
+        .tshirt-white .logo-placeholder {
+            color: white;
+        }
+
+        .qr-placeholder {
+            font-size: 10px;
+            color: #999;
+        }
+
+        /* Specs */
+        .specs {
+            margin-top: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 12px;
+        }
+
+        .specs h3 {
+            font-size: 14px;
+            color: var(--dark-brown);
+            margin-bottom: 10px;
+        }
+
+        .specs ul {
+            list-style: none;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .specs li {
+            padding: 5px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .specs li:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="page-title">Volunteer T-Shirt Designs</h1>
+
+    <!-- SAFFRON T-SHIRT -->
+    <h2 class="section-title">Option 1: Saffron T-Shirt</h2>
+    <div class="tshirt-row">
+        <div class="tshirt-container">
+            <div class="tshirt-label">FRONT</div>
+            <div class="tshirt">
+                <div class="tshirt-body">
+                    <div class="collar"></div>
+                    <div class="print-area">
+                        <div class="logo-circle">
+                            <div class="logo-placeholder">[LOGO]</div>
+                        </div>
+                        <div class="brand">BHANDARA CHOWK</div>
+                        <div class="main-text">
+                            "मेले में मदद चाहिए?<br>
+                            मुझसे पूछो!"
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tshirt-container">
+            <div class="tshirt-label">BACK</div>
+            <div class="tshirt">
+                <div class="tshirt-body">
+                    <div class="collar"></div>
+                    <div class="back-print">
+                        <div class="title">माघ मेले में खोजें:</div>
+                        <div class="features">
+                            <span class="feature">🏥 Medical</span>
+                            <span class="feature">🍽️ भंडारे</span>
+                            <span class="feature">🕉️ अखाड़े</span>
+                            <span class="feature">📍 संगम</span>
+                        </div>
+                        <div class="qr-box">
+                            <div class="qr-placeholder">[QR CODE]</div>
+                        </div>
+                        <div class="url">bhandarachowk.in</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- WHITE T-SHIRT -->
+    <h2 class="section-title">Option 2: White T-Shirt</h2>
+    <div class="tshirt-row">
+        <div class="tshirt-container">
+            <div class="tshirt-label">FRONT</div>
+            <div class="tshirt tshirt-white">
+                <div class="tshirt-body">
+                    <div class="collar"></div>
+                    <div class="print-area">
+                        <div class="logo-circle">
+                            <div class="logo-placeholder">[LOGO]</div>
+                        </div>
+                        <div class="brand">BHANDARA CHOWK</div>
+                        <div class="main-text">
+                            "मेले में मदद चाहिए?<br>
+                            मुझसे पूछो!"
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tshirt-container">
+            <div class="tshirt-label">BACK</div>
+            <div class="tshirt tshirt-white">
+                <div class="tshirt-body">
+                    <div class="collar"></div>
+                    <div class="back-print">
+                        <div class="title">माघ मेले में खोजें:</div>
+                        <div class="features">
+                            <span class="feature">🏥 Medical</span>
+                            <span class="feature">🍽️ भंडारे</span>
+                            <span class="feature">🕉️ अखाड़े</span>
+                            <span class="feature">📍 संगम</span>
+                        </div>
+                        <div class="qr-box">
+                            <div class="qr-placeholder">[QR CODE]</div>
+                        </div>
+                        <div class="url">bhandarachowk.in</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SPECIFICATIONS -->
+    <h2 class="section-title">Printing Specifications</h2>
+    <div style="display: flex; gap: 30px; flex-wrap: wrap;">
+        <div class="specs" style="flex: 1; min-width: 280px;">
+            <h3>T-Shirt Details</h3>
+            <ul>
+                <li><strong>Material:</strong> 100% Cotton or Cotton Blend</li>
+                <li><strong>GSM:</strong> 180-200 GSM (good quality)</li>
+                <li><strong>Colors:</strong> Saffron/Orange (#C96B4B) or White</li>
+                <li><strong>Sizes:</strong> S, M, L, XL, XXL</li>
+                <li><strong>Neck:</strong> Round neck</li>
+            </ul>
+        </div>
+        <div class="specs" style="flex: 1; min-width: 280px;">
+            <h3>Print Details</h3>
+            <ul>
+                <li><strong>Front Print Size:</strong> 8" x 10" (chest area)</li>
+                <li><strong>Back Print Size:</strong> 10" x 12" (upper back)</li>
+                <li><strong>Print Type:</strong> Screen printing or DTF</li>
+                <li><strong>QR Code Size:</strong> Minimum 3" x 3" (scannable)</li>
+                <li><strong>Colors:</strong> White print on saffron / Saffron print on white</li>
+            </ul>
+        </div>
+        <div class="specs" style="flex: 1; min-width: 280px;">
+            <h3>Estimated Cost</h3>
+            <ul>
+                <li><strong>Blank T-shirt:</strong> ₹120-150 per piece</li>
+                <li><strong>Front Print:</strong> ₹40-50 per piece</li>
+                <li><strong>Back Print:</strong> ₹50-60 per piece</li>
+                <li><strong>Total per T-shirt:</strong> ₹210-260</li>
+                <li><strong>30 T-shirts:</strong> ₹6,300 - ₹7,800</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

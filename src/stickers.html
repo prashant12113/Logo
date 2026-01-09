@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhandara Chowk - QR Sticker Designs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:wght@400&family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --saffron: #C96B4B;
+            --saffron-light: #E8A88A;
+            --saffron-pale: #FFF5F0;
+            --dark-brown: #3D3D3D;
+            --cream: #FFFBF7;
+            --white: #FFFFFF;
+            --red: #D32F2F;
+            --orange: #FF8F00;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f0f0f0;
+            padding: 40px;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 28px;
+            color: var(--dark-brown);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .page-subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            color: var(--dark-brown);
+            margin: 40px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--saffron-light);
+        }
+
+        .stickers-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .sticker-container {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .sticker-label {
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        /* ============ 7x7cm STICKERS ============ */
+        .sticker-7x7 {
+            width: 265px; /* 7cm at 96dpi */
+            height: 265px;
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Sticker 1: General - Saffron */
+        .sticker-general {
+            background: linear-gradient(135deg, var(--saffron) 0%, #A0522D 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .sticker-general .logo-circle {
+            width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
+            font-size: 10px;
+            color: var(--saffron);
+        }
+
+        .sticker-general .qr-box {
+            width: 110px;
+            height: 110px;
+            background: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            color: #999;
+            margin-bottom: 12px;
+        }
+
+        .sticker-general .text-hindi {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .sticker-general .url {
+            font-size: 13px;
+            font-weight: 700;
+            color: white;
+        }
+
+        /* Sticker 2: Medical - Red */
+        .sticker-medical {
+            background: linear-gradient(135deg, var(--red) 0%, #B71C1C 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .sticker-medical .icon {
+            font-size: 35px;
+            margin-bottom: 8px;
+        }
+
+        .sticker-medical .text-hindi {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 15px;
+            color: white;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .sticker-medical .qr-box {
+            width: 100px;
+            height: 100px;
+            background: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            color: #999;
+            margin-bottom: 10px;
+        }
+
+        .sticker-medical .url {
+            font-size: 12px;
+            font-weight: 700;
+            color: white;
+        }
+
+        /* Sticker 3: Food - Orange */
+        .sticker-food {
+            background: linear-gradient(135deg, var(--orange) 0%, #F57C00 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .sticker-food .icon {
+            font-size: 35px;
+            margin-bottom: 8px;
+        }
+
+        .sticker-food .text-hindi {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .sticker-food .qr-box {
+            width: 100px;
+            height: 100px;
+            background: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            color: #999;
+            margin-bottom: 10px;
+        }
+
+        .sticker-food .url {
+            font-size: 12px;
+            font-weight: 700;
+            color: white;
+        }
+
+        /* Sticker 4: Navigation - Dark */
+        .sticker-nav {
+            background: linear-gradient(135deg, #2C3E50 0%, #1a252f 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .sticker-nav .icon {
+            font-size: 35px;
+            margin-bottom: 8px;
+        }
+
+        .sticker-nav .text-hindi {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .sticker-nav .qr-box {
+            width: 100px;
+            height: 100px;
+            background: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            color: #999;
+            margin-bottom: 10px;
+        }
+
+        .sticker-nav .url {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--saffron-light);
+        }
+
+        /* Sticker 5: Minimal White */
+        .sticker-minimal {
+            background: white;
+            border: 3px solid var(--saffron);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .sticker-minimal .logo-circle {
+            width: 45px;
+            height: 45px;
+            background: var(--saffron-pale);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 10px;
+            font-size: 9px;
+            color: var(--saffron);
+        }
+
+        .sticker-minimal .qr-box {
+            width: 110px;
+            height: 110px;
+            background: #f9f9f9;
+            border: 2px dashed var(--saffron-light);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 11px;
+            color: #999;
+            margin-bottom: 10px;
+        }
+
+        .sticker-minimal .text-hindi {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 14px;
+            color: var(--dark-brown);
+            text-align: center;
+            margin-bottom: 5px;
+        }
+
+        .sticker-minimal .url {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--saffron);
+        }
+
+        /* ============ 5x5cm STICKERS (SMALL) ============ */
+        .sticker-5x5 {
+            width: 189px; /* 5cm at 96dpi */
+            height: 189px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .sticker-small-saffron {
+            background: var(--saffron);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+        }
+
+        .sticker-small-saffron .qr-box {
+            width: 90px;
+            height: 90px;
+            background: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            color: #999;
+            margin-bottom: 10px;
+        }
+
+        .sticker-small-saffron .text {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 13px;
+            color: white;
+            text-align: center;
+        }
+
+        .sticker-small-saffron .url {
+            font-size: 11px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .sticker-small-white {
+            background: white;
+            border: 2px solid var(--saffron);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 15px;
+        }
+
+        .sticker-small-white .qr-box {
+            width: 90px;
+            height: 90px;
+            background: var(--saffron-pale);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            color: #999;
+            margin-bottom: 10px;
+        }
+
+        .sticker-small-white .text {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 12px;
+            color: var(--dark-brown);
+            text-align: center;
+        }
+
+        .sticker-small-white .url {
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--saffron);
+        }
+
+        /* ============ 10x10cm STICKERS (LARGE) ============ */
+        .sticker-10x10 {
+            width: 378px; /* 10cm at 96dpi */
+            height: 378px;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .sticker-large {
+            background: linear-gradient(135deg, var(--saffron) 0%, #A0522D 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 25px;
+            height: 100%;
+        }
+
+        .sticker-large .logo-circle {
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            font-size: 11px;
+            color: var(--saffron);
+        }
+
+        .sticker-large .title {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 22px;
+            color: white;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .sticker-large .qr-box {
+            width: 160px;
+            height: 160px;
+            background: white;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 15px;
+        }
+
+        .sticker-large .subtitle {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 16px;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 8px;
+        }
+
+        .sticker-large .url {
+            font-size: 18px;
+            font-weight: 700;
+            color: white;
+        }
+
+        /* ============ AUTO RICKSHAW STICKERS ============ */
+        .auto-back {
+            width: 456px; /* 18 inches at 96dpi scaled */
+            height: 304px; /* 12 inches */
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .auto-back-design {
+            background: linear-gradient(135deg, var(--saffron) 0%, #A0522D 100%);
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px;
+        }
+
+        .auto-back-design .left {
+            flex: 1;
+        }
+
+        .auto-back-design .title {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 28px;
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .auto-back-design .subtitle {
+            font-size: 16px;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 15px;
+        }
+
+        .auto-back-design .url {
+            font-size: 20px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .auto-back-design .qr-box {
+            width: 140px;
+            height: 140px;
+            background: white;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #999;
+        }
+
+        .auto-side {
+            width: 500px;
+            height: 100px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .auto-side-design {
+            background: var(--saffron);
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 15px 25px;
+            gap: 20px;
+        }
+
+        .auto-side-design .icons {
+            font-size: 24px;
+        }
+
+        .auto-side-design .text {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 18px;
+            color: white;
+        }
+
+        .auto-side-design .url {
+            font-size: 16px;
+            font-weight: 700;
+            color: white;
+            background: rgba(0,0,0,0.2);
+            padding: 8px 15px;
+            border-radius: 20px;
+        }
+
+        /* ============ TEA STALL CARDS ============ */
+        .tea-card {
+            width: 300px;
+            height: 200px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .tea-card-design {
+            background: white;
+            border: 3px solid var(--saffron);
+            height: 100%;
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .tea-card-design .left {
+            flex: 1;
+        }
+
+        .tea-card-design .logo-small {
+            width: 35px;
+            height: 35px;
+            background: var(--saffron-pale);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 8px;
+            color: var(--saffron);
+            margin-bottom: 10px;
+        }
+
+        .tea-card-design .title {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 14px;
+            color: var(--dark-brown);
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .tea-card-design .features {
+            font-size: 11px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .tea-card-design .url {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--saffron);
+            margin-top: 10px;
+        }
+
+        .tea-card-design .qr-box {
+            width: 100px;
+            height: 100px;
+            background: var(--saffron-pale);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            color: #999;
+            align-self: center;
+        }
+
+        /* Print styles */
+        @media print {
+            body { background: white; padding: 20px; }
+            .page-title, .page-subtitle, .section-title, .sticker-label { display: none; }
+            .sticker-container { box-shadow: none; padding: 10px; page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="page-title">Bhandara Chowk - QR Sticker Designs</h1>
+    <p class="page-subtitle">All stickers include space for QR code leading to bhandarachowk.in</p>
+
+    <!-- 7x7cm STICKERS -->
+    <h2 class="section-title">7x7 cm Stickers (Standard Size)</h2>
+    <div class="stickers-row">
+        <div class="sticker-container">
+            <div class="sticker-label">General - Saffron</div>
+            <div class="sticker-7x7 sticker-general">
+                <div class="logo-circle">[LOGO]</div>
+                <div class="qr-box">[QR CODE]</div>
+                <div class="text-hindi">कहाँ है? Scan करो!</div>
+                <div class="url">bhandarachowk.in</div>
+            </div>
+        </div>
+
+        <div class="sticker-container">
+            <div class="sticker-label">Medical Emergency - Red</div>
+            <div class="sticker-7x7 sticker-medical">
+                <div class="icon">🏥</div>
+                <div class="text-hindi">MEDICAL HELP?</div>
+                <div class="qr-box">[QR CODE]</div>
+                <div class="text-hindi" style="font-size: 13px;">Nearest camp खोजें</div>
+                <div class="url">bhandarachowk.in</div>
+            </div>
+        </div>
+
+        <div class="sticker-container">
+            <div class="sticker-label">Food / Bhandara - Orange</div>
+            <div class="sticker-7x7 sticker-food">
+                <div class="icon">🍽️</div>
+                <div class="text-hindi">भूख लगी है?</div>
+                <div class="qr-box">[QR CODE]</div>
+                <div class="text-hindi" style="font-size: 13px;">FREE भंडारा खोजें</div>
+                <div class="url">bhandarachowk.in</div>
+            </div>
+        </div>
+
+        <div class="sticker-container">
+            <div class="sticker-label">Navigation - Dark</div>
+            <div class="sticker-7x7 sticker-nav">
+                <div class="icon">📍</div>
+                <div class="text-hindi">भटक गए?</div>
+                <div class="qr-box">[QR CODE]</div>
+                <div class="text-hindi" style="font-size: 13px;">रास्ता खोजें</div>
+                <div class="url">bhandarachowk.in</div>
+            </div>
+        </div>
+
+        <div class="sticker-container">
+            <div class="sticker-label">Minimal - White</div>
+            <div class="sticker-7x7 sticker-minimal">
+                <div class="logo-circle">[LOGO]</div>
+                <div class="qr-box">[QR CODE]</div>
+                <div class="text-hindi">माघ मेला Guide</div>
+                <div class="url">bhandarachowk.in</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5x5cm STICKERS -->
+    <h2 class="section-title">5x5 cm Stickers (Small - for Poles)</h2>
+    <div class="stickers-row">
+        <div class="sticker-container">
+            <div class="sticker-label">Small Saffron</div>
+            <div class="sticker-5x5 sticker-small-saffron">
+                <div class="qr-box">[QR]</div>
+                <div class="text">Scan करो!</div>
+                <div class="url">bhandarachowk.in</div>
+            </div>
+        </div>
+
+        <div class="sticker-container">
+            <div class="sticker-label">Small White</div>
+            <div class="sticker-5x5 sticker-small-white">
+                <div class="qr-box">[QR]</div>
+                <div class="text">कहाँ है?</div>
+                <div class="url">bhandarachowk.in</div>
+            </div>
+        </div>
+
+        <div class="sticker-container">
+            <div class="sticker-label">Small Medical</div>
+            <div class="sticker-5x5" style="background: var(--red); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 15px;">
+                <div style="font-size: 24px; margin-bottom: 5px;">🏥</div>
+                <div class="qr-box" style="width: 80px; height: 80px; background: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 9px; color: #999; margin-bottom: 8px;">[QR]</div>
+                <div style="font-size: 10px; font-weight: 700; color: white;">bhandarachowk.in</div>
+            </div>
+        </div>
+
+        <div class="sticker-container">
+            <div class="sticker-label">Small Food</div>
+            <div class="sticker-5x5" style="background: var(--orange); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 15px;">
+                <div style="font-size: 24px; margin-bottom: 5px;">🍽️</div>
+                <div class="qr-box" style="width: 80px; height: 80px; background: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 9px; color: #999; margin-bottom: 8px;">[QR]</div>
+                <div style="font-size: 10px; font-weight: 700; color: white;">bhandarachowk.in</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 10x10cm STICKERS -->
+    <h2 class="section-title">10x10 cm Stickers (Large - for Vehicles/Walls)</h2>
+    <div class="stickers-row">
+        <div class="sticker-container">
+            <div class="sticker-label">Large Saffron</div>
+            <div class="sticker-10x10">
+                <div class="sticker-large">
+                    <div class="logo-circle">[LOGO]</div>
+                    <div class="title">माघ मेले में कुछ भी खोजें!</div>
+                    <div class="qr-box">[QR CODE]</div>
+                    <div class="subtitle">📱 Scan करें या खोलें:</div>
+                    <div class="url">bhandarachowk.in</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- AUTO RICKSHAW -->
+    <h2 class="section-title">Auto-Rickshaw Branding</h2>
+    <div class="stickers-row">
+        <div class="sticker-container">
+            <div class="sticker-label">Back Panel (18" x 12")</div>
+            <div class="auto-back">
+                <div class="auto-back-design">
+                    <div class="left">
+                        <div class="title">माघ मेले में भटक गए?</div>
+                        <div class="subtitle">कुछ भी खोजें - Medical, भंडारा, संगम</div>
+                        <div class="url">bhandarachowk.in</div>
+                    </div>
+                    <div class="qr-box">[QR CODE]</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="stickers-row">
+        <div class="sticker-container">
+            <div class="sticker-label">Side Panel (24" x 4")</div>
+            <div class="auto-side">
+                <div class="auto-side-design">
+                    <div class="icons">🏥 🍽️ 📍</div>
+                    <div class="text">Medical • भंडारा • संगम</div>
+                    <div class="url">bhandarachowk.in</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- TEA STALL CARDS -->
+    <h2 class="section-title">Tea Stall / Counter Cards</h2>
+    <div class="stickers-row">
+        <div class="sticker-container">
+            <div class="sticker-label">Counter Card</div>
+            <div class="tea-card">
+                <div class="tea-card-design">
+                    <div class="left">
+                        <div class="logo-small">[LOGO]</div>
+                        <div class="title">माघ मेले में<br>कहीं भी जाना है?</div>
+                        <div class="features">🏥 Medical &nbsp; 🍽️ भंडारा<br>📍 संगम &nbsp; 🅿️ Parking</div>
+                        <div class="url">bhandarachowk.in</div>
+                    </div>
+                    <div class="qr-box">[QR CODE]</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sticker-container">
+            <div class="sticker-label">Tent Card Style</div>
+            <div style="width: 200px; height: 150px; background: var(--saffron-pale); border: 2px solid var(--saffron); border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 15px;">
+                <div style="font-family: 'Tiro Devanagari Hindi', serif; font-size: 13px; color: var(--dark-brown); margin-bottom: 10px; text-align: center;">चाय पीते-पीते...<br>मेले का map देखो!</div>
+                <div style="width: 70px; height: 70px; background: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 9px; color: #999; margin-bottom: 8px;">[QR]</div>
+                <div style="font-size: 11px; font-weight: 700; color: var(--saffron);">bhandarachowk.in</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

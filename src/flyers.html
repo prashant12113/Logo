@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhandara Chowk - Flyer Designs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:wght@400&family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --saffron: #C96B4B;
+            --saffron-light: #E8A88A;
+            --saffron-pale: #FFF5F0;
+            --dark-brown: #3D3D3D;
+            --cream: #FFFBF7;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f0f0f0;
+            padding: 40px;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 28px;
+            color: var(--dark-brown);
+            margin-bottom: 40px;
+            font-weight: 700;
+        }
+
+        .designs-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+        }
+
+        .design-container {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .design-label {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        /* A5 Flyer - 148mm x 210mm at 96dpi ≈ 560px x 794px */
+        .flyer {
+            width: 560px;
+            height: 794px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* ============ FLYER 1: GENERAL PURPOSE ============ */
+        .flyer-general {
+            background: linear-gradient(180deg, var(--cream) 0%, var(--saffron-pale) 100%);
+        }
+
+        .flyer-general .header {
+            background: var(--saffron);
+            padding: 25px 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .flyer-general .header::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            right: 0;
+            height: 40px;
+            background: var(--saffron);
+            clip-path: ellipse(50% 100% at 50% 0%);
+        }
+
+        .flyer-general .logo-area {
+            width: 70px;
+            height: 70px;
+            margin: 0 auto 10px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .flyer-general .logo-placeholder {
+            font-size: 10px;
+            color: var(--saffron);
+            text-align: center;
+        }
+
+        .flyer-general .main-title {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 32px;
+            color: white;
+            margin-top: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .flyer-general .subtitle {
+            font-size: 14px;
+            color: rgba(255,255,255,0.9);
+            margin-top: 5px;
+        }
+
+        .flyer-general .content {
+            padding: 50px 30px 30px;
+        }
+
+        .flyer-general .tagline {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 26px;
+            color: var(--dark-brown);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .flyer-general .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .flyer-general .feature-item {
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: transform 0.2s;
+        }
+
+        .flyer-general .feature-icon {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .flyer-general .feature-text {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 14px;
+            color: var(--dark-brown);
+        }
+
+        .flyer-general .feature-text-en {
+            font-size: 11px;
+            color: #888;
+        }
+
+        .flyer-general .qr-section {
+            background: white;
+            padding: 25px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .flyer-general .qr-box {
+            width: 140px;
+            height: 140px;
+            background: #f5f5f5;
+            border: 3px dashed var(--saffron-light);
+            border-radius: 12px;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #999;
+        }
+
+        .flyer-general .scan-text {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 18px;
+            color: var(--dark-brown);
+        }
+
+        .flyer-general .url {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--saffron);
+            margin-top: 8px;
+        }
+
+        .flyer-general .footer {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .flyer-general .badge {
+            background: var(--saffron);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .flyer-general .bottom-note {
+            background: var(--saffron);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 16px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        /* ============ FLYER 2: MEDICAL EMERGENCY ============ */
+        .flyer-medical {
+            background: linear-gradient(180deg, #FFF5F5 0%, #FFE8E8 100%);
+        }
+
+        .flyer-medical .emergency-header {
+            background: linear-gradient(135deg, #D32F2F 0%, #B71C1C 100%);
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .flyer-medical .emergency-icon {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .flyer-medical .emergency-title {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 34px;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .flyer-medical .emergency-subtitle {
+            font-size: 16px;
+            color: rgba(255,255,255,0.9);
+            margin-top: 8px;
+        }
+
+        .flyer-medical .pulse-ring {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255,255,255,0.7); }
+            70% { box-shadow: 0 0 0 20px rgba(255,255,255,0); }
+            100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); }
+        }
+
+        .flyer-medical .content {
+            padding: 30px;
+        }
+
+        .flyer-medical .services-title {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 22px;
+            color: var(--dark-brown);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .flyer-medical .service-list {
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .flyer-medical .service-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .flyer-medical .service-item:last-child {
+            border-bottom: none;
+        }
+
+        .flyer-medical .service-icon {
+            width: 45px;
+            height: 45px;
+            background: #FFE8E8;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            margin-right: 15px;
+        }
+
+        .flyer-medical .service-text {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 18px;
+            color: var(--dark-brown);
+        }
+
+        .flyer-medical .service-text-en {
+            font-size: 12px;
+            color: #888;
+        }
+
+        .flyer-medical .qr-section {
+            background: white;
+            padding: 25px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border: 3px solid #D32F2F;
+        }
+
+        .flyer-medical .qr-title {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 20px;
+            color: #D32F2F;
+            margin-bottom: 15px;
+        }
+
+        .flyer-medical .qr-box {
+            width: 130px;
+            height: 130px;
+            background: #f5f5f5;
+            border: 3px dashed #D32F2F;
+            border-radius: 12px;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #999;
+        }
+
+        .flyer-medical .url {
+            font-size: 20px;
+            font-weight: 700;
+            color: #D32F2F;
+        }
+
+        .flyer-medical .bottom-warning {
+            background: #D32F2F;
+            color: white;
+            text-align: center;
+            padding: 15px 20px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .flyer-medical .warning-text {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 14px;
+        }
+
+        /* ============ FLYER 3: BHANDARA/FOOD ============ */
+        .flyer-food {
+            background: linear-gradient(180deg, #FFF8E1 0%, #FFECB3 100%);
+        }
+
+        .flyer-food .food-header {
+            background: linear-gradient(135deg, #FF8F00 0%, #F57C00 100%);
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .flyer-food .food-header::before {
+            content: '🍽️';
+            position: absolute;
+            font-size: 100px;
+            opacity: 0.1;
+            top: -20px;
+            right: -20px;
+        }
+
+        .flyer-food .food-icon {
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
+
+        .flyer-food .food-title {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 38px;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .flyer-food .content {
+            padding: 30px;
+        }
+
+        .flyer-food .info-card {
+            background: white;
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .flyer-food .info-number {
+            font-size: 48px;
+            font-weight: 900;
+            color: #FF8F00;
+        }
+
+        .flyer-food .info-text {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 22px;
+            color: var(--dark-brown);
+        }
+
+        .flyer-food .info-subtext {
+            font-size: 14px;
+            color: #888;
+            margin-top: 5px;
+        }
+
+        .flyer-food .benefits {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 25px;
+        }
+
+        .flyer-food .benefit {
+            text-align: center;
+        }
+
+        .flyer-food .benefit-icon {
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin: 0 auto 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .flyer-food .benefit-text {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 13px;
+            color: var(--dark-brown);
+        }
+
+        .flyer-food .qr-section {
+            background: white;
+            padding: 25px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+
+        .flyer-food .qr-prompt {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 20px;
+            color: var(--dark-brown);
+            margin-bottom: 15px;
+        }
+
+        .flyer-food .qr-box {
+            width: 130px;
+            height: 130px;
+            background: #FFF8E1;
+            border: 3px dashed #FF8F00;
+            border-radius: 12px;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #999;
+        }
+
+        .flyer-food .url {
+            font-size: 20px;
+            font-weight: 700;
+            color: #FF8F00;
+        }
+
+        .flyer-food .footer-badges {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .flyer-food .badge {
+            background: #FF8F00;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .flyer-food .bottom-bar {
+            background: #FF8F00;
+            color: white;
+            text-align: center;
+            padding: 12px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 16px;
+        }
+
+        /* ============ FLYER 4: KALPVASI/SPIRITUAL ============ */
+        .flyer-spiritual {
+            background: linear-gradient(180deg, #FFF3E0 0%, #FFE0B2 100%);
+            position: relative;
+        }
+
+        .flyer-spiritual::before {
+            content: '🕉️';
+            position: absolute;
+            font-size: 300px;
+            opacity: 0.03;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .flyer-spiritual .spiritual-header {
+            background: linear-gradient(135deg, var(--saffron) 0%, #A0522D 100%);
+            padding: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        .flyer-spiritual .om-symbol {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+
+        .flyer-spiritual .spiritual-title {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 32px;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .flyer-spiritual .spiritual-subtitle {
+            font-size: 14px;
+            color: rgba(255,255,255,0.9);
+            margin-top: 5px;
+        }
+
+        .flyer-spiritual .content {
+            padding: 30px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .flyer-spiritual .offering-title {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 22px;
+            color: var(--dark-brown);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .flyer-spiritual .offerings {
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .flyer-spiritual .offering-item {
+            display: flex;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .flyer-spiritual .offering-item:last-child {
+            border-bottom: none;
+        }
+
+        .flyer-spiritual .offering-icon {
+            width: 45px;
+            height: 45px;
+            background: var(--saffron-pale);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            margin-right: 15px;
+        }
+
+        .flyer-spiritual .offering-text {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 17px;
+            color: var(--dark-brown);
+        }
+
+        .flyer-spiritual .qr-section {
+            background: white;
+            padding: 25px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            border: 2px solid var(--saffron-light);
+        }
+
+        .flyer-spiritual .qr-title {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 18px;
+            color: var(--dark-brown);
+            margin-bottom: 15px;
+        }
+
+        .flyer-spiritual .qr-box {
+            width: 120px;
+            height: 120px;
+            background: var(--saffron-pale);
+            border: 3px dashed var(--saffron);
+            border-radius: 12px;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #999;
+        }
+
+        .flyer-spiritual .url {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--saffron);
+        }
+
+        .flyer-spiritual .bottom-blessing {
+            background: var(--saffron);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+
+        .flyer-spiritual .blessing-text {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 16px;
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .page-title, .design-label {
+                display: none;
+            }
+            .design-container {
+                box-shadow: none;
+                padding: 0;
+                page-break-after: always;
+            }
+            .flyer {
+                width: 148mm;
+                height: 210mm;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="page-title">Bhandara Chowk - Flyer Designs (A5 Size)</h1>
+    
+    <div class="designs-grid">
+        <!-- FLYER 1: GENERAL PURPOSE -->
+        <div class="design-container">
+            <div class="design-label">Flyer 1: General Purpose</div>
+            <div class="flyer flyer-general">
+                <div class="header">
+                    <div class="logo-area">
+                        <div class="logo-placeholder">[LOGO]</div>
+                    </div>
+                    <div class="main-title">भंडारा चौक</div>
+                    <div class="subtitle">BHANDARA CHOWK</div>
+                </div>
+                
+                <div class="content">
+                    <div class="tagline">माघ मेले में कुछ भी खोजें!</div>
+                    
+                    <div class="features-grid">
+                        <div class="feature-item">
+                            <div class="feature-icon">🏥</div>
+                            <div class="feature-text">Medical Camps</div>
+                            <div class="feature-text-en">Free Healthcare</div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🍽️</div>
+                            <div class="feature-text">भंडारे</div>
+                            <div class="feature-text-en">Free Food</div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🕉️</div>
+                            <div class="feature-text">अखाड़े</div>
+                            <div class="feature-text-en">Akharas</div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">📍</div>
+                            <div class="feature-text">संगम</div>
+                            <div class="feature-text-en">Sangam</div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🅿️</div>
+                            <div class="feature-text">Parking</div>
+                            <div class="feature-text-en">Vehicle Parking</div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🚻</div>
+                            <div class="feature-text">सुविधाएं</div>
+                            <div class="feature-text-en">Facilities</div>
+                        </div>
+                    </div>
+                    
+                    <div class="qr-section">
+                        <div class="qr-box">[QR CODE]</div>
+                        <div class="scan-text">📱 Scan करें या खोलें:</div>
+                        <div class="url">bhandarachowk.in</div>
+                    </div>
+                    
+                    <div class="footer">
+                        <span class="badge">✅ Free</span>
+                        <span class="badge">✅ No Download</span>
+                        <span class="badge">✅ Works Offline</span>
+                    </div>
+                </div>
+                
+                <div class="bottom-note">🙏 अपने साथियों को भी बताएं!</div>
+            </div>
+        </div>
+
+        <!-- FLYER 2: MEDICAL EMERGENCY -->
+        <div class="design-container">
+            <div class="design-label">Flyer 2: Medical Emergency</div>
+            <div class="flyer flyer-medical">
+                <div class="emergency-header">
+                    <div class="pulse-ring"></div>
+                    <div class="emergency-icon">🏥</div>
+                    <div class="emergency-title">EMERGENCY में याद रखें!</div>
+                    <div class="emergency-subtitle">Save this for Medical Help</div>
+                </div>
+                
+                <div class="content">
+                    <div class="services-title">माघ मेले में FREE Medical Help:</div>
+                    
+                    <div class="service-list">
+                        <div class="service-item">
+                            <div class="service-icon">👨‍⚕️</div>
+                            <div>
+                                <div class="service-text">निशुल्क परामर्श</div>
+                                <div class="service-text-en">Free Consultation</div>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon">💊</div>
+                            <div>
+                                <div class="service-text">मुफ्त दवाइयाँ</div>
+                                <div class="service-text-en">Free Medicines</div>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon">🩹</div>
+                            <div>
+                                <div class="service-text">प्राथमिक चिकित्सा</div>
+                                <div class="service-text-en">First Aid Centers</div>
+                            </div>
+                        </div>
+                        <div class="service-item">
+                            <div class="service-icon">🚑</div>
+                            <div>
+                                <div class="service-text">Ambulance Points</div>
+                                <div class="service-text-en">Emergency Transport</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="qr-section">
+                        <div class="qr-title">तुरंत नज़दीकी Medical Camp खोजें:</div>
+                        <div class="qr-box">[QR CODE]</div>
+                        <div class="url">bhandarachowk.in</div>
+                    </div>
+                </div>
+                
+                <div class="bottom-warning">
+                    <div class="warning-text">⚠️ इस पर्चे को फेंके नहीं - किसी ज़रूरतमंद को दे दें</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FLYER 3: BHANDARA/FOOD -->
+        <div class="design-container">
+            <div class="design-label">Flyer 3: Bhandara / Food</div>
+            <div class="flyer flyer-food">
+                <div class="food-header">
+                    <div class="food-icon">🍽️</div>
+                    <div class="food-title">भूख लगी है?</div>
+                </div>
+                
+                <div class="content">
+                    <div class="info-card">
+                        <div class="info-number">100+</div>
+                        <div class="info-text">भंडारे माघ मेले में!</div>
+                        <div class="info-subtext">निशुल्क भोजन - प्रसाद सेवा</div>
+                    </div>
+                    
+                    <div class="benefits">
+                        <div class="benefit">
+                            <div class="benefit-icon">📍</div>
+                            <div class="benefit-text">नज़दीकी<br>भंडारा</div>
+                        </div>
+                        <div class="benefit">
+                            <div class="benefit-icon">🕐</div>
+                            <div class="benefit-text">Timing<br>जानें</div>
+                        </div>
+                        <div class="benefit">
+                            <div class="benefit-icon">🗺️</div>
+                            <div class="benefit-text">रास्ता<br>पाएं</div>
+                        </div>
+                    </div>
+                    
+                    <div class="qr-section">
+                        <div class="qr-prompt">अभी खोजें:</div>
+                        <div class="qr-box">[QR CODE]</div>
+                        <div class="url">bhandarachowk.in</div>
+                        
+                        <div class="footer-badges">
+                            <span class="badge">✅ Free</span>
+                            <span class="badge">✅ No App</span>
+                            <span class="badge">✅ Instant</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bottom-bar">🙏 अन्न दान - महादान</div>
+            </div>
+        </div>
+
+        <!-- FLYER 4: KALPVASI/SPIRITUAL -->
+        <div class="design-container">
+            <div class="design-label">Flyer 4: Kalpvasi / Spiritual</div>
+            <div class="flyer flyer-spiritual">
+                <div class="spiritual-header">
+                    <div class="om-symbol">🙏</div>
+                    <div class="spiritual-title">कल्पवासियों के लिए</div>
+                    <div class="spiritual-subtitle">माघ मेला 2025</div>
+                </div>
+                
+                <div class="content">
+                    <div class="offering-title">माघ मेले में खोजें:</div>
+                    
+                    <div class="offerings">
+                        <div class="offering-item">
+                            <div class="offering-icon">🕉️</div>
+                            <div class="offering-text">महात्माओं के शिविर</div>
+                        </div>
+                        <div class="offering-item">
+                            <div class="offering-icon">📿</div>
+                            <div class="offering-text">भजन-कीर्तन स्थल</div>
+                        </div>
+                        <div class="offering-item">
+                            <div class="offering-icon">🏕️</div>
+                            <div class="offering-text">आश्रम एवं अखाड़े</div>
+                        </div>
+                        <div class="offering-item">
+                            <div class="offering-icon">💊</div>
+                            <div class="offering-text">निशुल्क चिकित्सा शिविर</div>
+                        </div>
+                        <div class="offering-item">
+                            <div class="offering-icon">🍽️</div>
+                            <div class="offering-text">निशुल्क भोजन (भंडारे)</div>
+                        </div>
+                    </div>
+                    
+                    <div class="qr-section">
+                        <div class="qr-title">सम्पूर्ण जानकारी एक स्थान पर:</div>
+                        <div class="qr-box">[QR CODE]</div>
+                        <div class="url">bhandarachowk.in</div>
+                    </div>
+                </div>
+                
+                <div class="bottom-blessing">
+                    <div class="blessing-text">🙏 हर श्रद्धालु तक पहुँचाएं</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -36,7 +36,7 @@ export default function Banners() {
               <div style={{ color: 'white', fontSize: 11, marginBottom: 5 }}>Scan करें →</div>
               <div className="MarketingBanners__entryUrl">bhandarachowk.in</div>
             </div>
-            <div className="MarketingBanners__entryQr"><img src="/qr/frame.jpg" alt="QR Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
+            <div className="MarketingBanners__entryQr"><img src={`${import.meta.env.BASE_URL}qr/frame.jpg`} alt="QR Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
           </div>
         </div>
       </div>
@@ -65,7 +65,7 @@ export default function Banners() {
             </div>
           </div>
           <div className="MarketingBanners__standeeQrBox">
-            <div className="MarketingBanners__standeeQr"><img src="/qr/frame.jpg" alt="QR Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
+            <div className="MarketingBanners__standeeQr"><img src={`${import.meta.env.BASE_URL}qr/frame.jpg`} alt="QR Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
             <div className="MarketingBanners__standeeUrl">bhandarachowk.in</div>
           </div>
           <div className="MarketingBanners__standeeFeatures">
@@ -84,7 +84,7 @@ export default function Banners() {
           </span>
           <span style={{ color: 'white', fontSize: 24 }}>→</span>
           <span className="MarketingBanners__roadUrl">bhandarachowk.in</span>
-          <div className="MarketingBanners__roadQr"><img src="/qr/frame.jpg" alt="QR Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
+          <div className="MarketingBanners__roadQr"><img src={`${import.meta.env.BASE_URL}qr/frame.jpg`} alt="QR Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
         </div>
       </div>
 
@@ -104,7 +104,7 @@ export default function Banners() {
               <div style={{ color: 'white', fontSize: 11 }}>नज़दीकी भंडारा खोजें:</div>
               <div className="MarketingBanners__ghatUrl">bhandarachowk.in</div>
             </div>
-            <div className="MarketingBanners__ghatQr"><img src="/qr/frame.jpg" alt="QR Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
+            <div className="MarketingBanners__ghatQr"><img src={`${import.meta.env.BASE_URL}qr/frame.jpg`} alt="QR Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
           </div>
         </div>
       </div>
@@ -125,7 +125,7 @@ export default function Banners() {
               <div style={{ color: 'white', fontSize: 11 }}>FREE Consultation + Medicines</div>
               <div className="MarketingBanners__ghatUrl">bhandarachowk.in</div>
             </div>
-            <div className="MarketingBanners__ghatQr"><img src="/qr/frame.jpg" alt="QR Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
+            <div className="MarketingBanners__ghatQr"><img src={`${import.meta.env.BASE_URL}qr/frame.jpg`} alt="QR Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
           </div>
         </div>
       </div>

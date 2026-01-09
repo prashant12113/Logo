@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhandara Chowk - WhatsApp Status & Social Images</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:wght@400&family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --saffron: #C96B4B;
+            --saffron-light: #E8A88A;
+            --saffron-pale: #FFF5F0;
+            --dark-brown: #3D3D3D;
+            --cream: #FFFBF7;
+            --white: #FFFFFF;
+            --red: #D32F2F;
+            --orange: #FF8F00;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #e8e8e8;
+            padding: 40px;
+        }
+
+        .page-title {
+            text-align: center;
+            font-size: 28px;
+            color: var(--dark-brown);
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .page-subtitle {
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            color: var(--dark-brown);
+            margin: 50px 0 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--saffron-light);
+        }
+
+        .images-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: flex-start;
+        }
+
+        .image-container {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .image-label {
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        /* ============ WHATSAPP STATUS (1080x1920 - 9:16) ============ */
+        .wa-status {
+            width: 270px; /* scaled */
+            height: 480px;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Status 1: General */
+        .status-general {
+            background: linear-gradient(180deg, var(--saffron) 0%, #A0522D 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 25px;
+        }
+
+        .status-general::before {
+            content: '🕉️';
+            position: absolute;
+            font-size: 200px;
+            opacity: 0.05;
+            top: 20%;
+        }
+
+        .status-general .logo-circle {
+            width: 70px;
+            height: 70px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .status-general .main-title {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 26px;
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .status-general .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 25px;
+            z-index: 1;
+        }
+
+        .status-general .feature {
+            background: rgba(255,255,255,0.15);
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: white;
+        }
+
+        .status-general .qr-box {
+            width: 110px;
+            height: 110px;
+            background: white;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .status-general .url {
+            font-size: 18px;
+            font-weight: 700;
+            color: white;
+            z-index: 1;
+        }
+
+        .status-general .swipe-hint {
+            position: absolute;
+            bottom: 20px;
+            font-size: 12px;
+            color: rgba(255,255,255,0.7);
+        }
+
+        /* Status 2: Medical */
+        .status-medical {
+            background: linear-gradient(180deg, var(--red) 0%, #B71C1C 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 25px;
+        }
+
+        .status-medical .icon {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
+        .status-medical .main-title {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 28px;
+            color: white;
+            text-align: center;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .status-medical .subtitle {
+            font-size: 15px;
+            color: rgba(255,255,255,0.9);
+            text-align: center;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .status-medical .qr-box {
+            width: 120px;
+            height: 120px;
+            background: white;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+
+        .status-medical .url {
+            font-size: 18px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .status-medical .save-hint {
+            position: absolute;
+            bottom: 20px;
+            font-size: 11px;
+            color: rgba(255,255,255,0.8);
+            background: rgba(0,0,0,0.2);
+            padding: 8px 15px;
+            border-radius: 15px;
+        }
+
+        /* Status 3: Food */
+        .status-food {
+            background: linear-gradient(180deg, var(--orange) 0%, #F57C00 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 25px;
+        }
+
+        .status-food .icon {
+            font-size: 60px;
+            margin-bottom: 15px;
+        }
+
+        .status-food .main-title {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 30px;
+            color: white;
+            text-align: center;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .status-food .subtitle {
+            font-size: 16px;
+            color: rgba(255,255,255,0.95);
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .status-food .qr-box {
+            width: 120px;
+            height: 120px;
+            background: white;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        }
+
+        .status-food .url {
+            font-size: 18px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .status-food .badge {
+            background: rgba(255,255,255,0.2);
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: white;
+        }
+
+        /* Status 4: Minimal Dark */
+        .status-dark {
+            background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 25px;
+        }
+
+        .status-dark .logo-circle {
+            width: 80px;
+            height: 80px;
+            background: var(--saffron);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            box-shadow: 0 0 40px rgba(201, 107, 75, 0.4);
+        }
+
+        .status-dark .brand {
+            font-size: 14px;
+            color: var(--saffron-light);
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+
+        .status-dark .main-title {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 26px;
+            color: white;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .status-dark .qr-box {
+            width: 130px;
+            height: 130px;
+            background: white;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+        }
+
+        .status-dark .url {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--saffron);
+        }
+
+        /* ============ SQUARE IMAGES (1:1) ============ */
+        .square-image {
+            width: 350px;
+            height: 350px;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        /* Square 1: General */
+        .square-general {
+            background: linear-gradient(135deg, var(--saffron) 0%, #A0522D 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            position: relative;
+        }
+
+        .square-general::before {
+            content: '';
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+            top: -50px;
+            right: -50px;
+        }
+
+        .square-general .logo-circle {
+            width: 55px;
+            height: 55px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            z-index: 1;
+        }
+
+        .square-general .main-title {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 24px;
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+            z-index: 1;
+        }
+
+        .square-general .qr-box {
+            width: 100px;
+            height: 100px;
+            background: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            z-index: 1;
+        }
+
+        .square-general .url {
+            font-size: 16px;
+            font-weight: 700;
+            color: white;
+            z-index: 1;
+        }
+
+        /* Square 2: Features */
+        .square-features {
+            background: var(--cream);
+            display: flex;
+            flex-direction: column;
+            padding: 25px;
+            position: relative;
+        }
+
+        .square-features .header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .square-features .logo-circle {
+            width: 40px;
+            height: 40px;
+            background: var(--saffron);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .square-features .brand-name {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--saffron);
+        }
+
+        .square-features .main-title {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 22px;
+            color: var(--dark-brown);
+            margin-bottom: 15px;
+        }
+
+        .square-features .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .square-features .feature {
+            background: white;
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .square-features .feature-icon {
+            font-size: 22px;
+            margin-bottom: 5px;
+        }
+
+        .square-features .feature-text {
+            font-size: 11px;
+            color: var(--dark-brown);
+        }
+
+        .square-features .footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: auto;
+        }
+
+        .square-features .url {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--saffron);
+        }
+
+        .square-features .qr-box {
+            width: 60px;
+            height: 60px;
+            background: white;
+            border: 2px solid var(--saffron-light);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Square 3: Medical Alert */
+        .square-medical {
+            background: linear-gradient(135deg, var(--red) 0%, #B71C1C 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+        }
+
+        .square-medical .icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .square-medical .main-title {
+            font-family: 'Tiro Devanagari Hindi', serif;
+            font-size: 22px;
+            color: white;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .square-medical .subtitle {
+            font-size: 13px;
+            color: rgba(255,255,255,0.9);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .square-medical .qr-box {
+            width: 90px;
+            height: 90px;
+            background: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .square-medical .url {
+            font-size: 15px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .qr-placeholder {
+            font-size: 10px;
+            color: #999;
+            text-align: center;
+        }
+
+        .logo-placeholder {
+            font-size: 8px;
+            color: var(--saffron);
+            text-align: center;
+        }
+
+        /* Print */
+        @media print {
+            body { background: white; }
+            .page-title, .page-subtitle, .section-title, .image-label { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="page-title">WhatsApp Status & Social Media Images</h1>
+    <p class="page-subtitle">Optimized for WhatsApp Status (9:16) and Social Posts (1:1)</p>
+
+    <!-- WHATSAPP STATUS (9:16) -->
+    <h2 class="section-title">WhatsApp Status (1080x1920 - Stories)</h2>
+    <div class="images-row">
+        <div class="image-container">
+            <div class="image-label">Status 1: General</div>
+            <div class="wa-status status-general">
+                <div class="logo-circle">
+                    <div class="logo-placeholder">[LOGO]</div>
+                </div>
+                <div class="main-title">माघ मेले में<br>कुछ भी खोजें!</div>
+                <div class="features">
+                    <span class="feature">🏥 Medical</span>
+                    <span class="feature">🍽️ भंडारे</span>
+                    <span class="feature">🕉️ अखाड़े</span>
+                    <span class="feature">📍 संगम</span>
+                </div>
+                <div class="qr-box">
+                    <div class="qr-placeholder">[QR CODE]</div>
+                </div>
+                <div class="url">bhandarachowk.in</div>
+                <div class="swipe-hint">↑ Link open करें</div>
+            </div>
+        </div>
+
+        <div class="image-container">
+            <div class="image-label">Status 2: Medical Emergency</div>
+            <div class="wa-status status-medical">
+                <div class="icon">🏥</div>
+                <div class="main-title">EMERGENCY में<br>काम आएगा!</div>
+                <div class="subtitle">माघ मेले में FREE<br>Medical Camp खोजें</div>
+                <div class="qr-box">
+                    <div class="qr-placeholder">[QR CODE]</div>
+                </div>
+                <div class="url">bhandarachowk.in</div>
+                <div class="save-hint">⚠️ Screenshot लेकर SAVE करें</div>
+            </div>
+        </div>
+
+        <div class="image-container">
+            <div class="image-label">Status 3: Food / Bhandara</div>
+            <div class="wa-status status-food">
+                <div class="icon">🍽️</div>
+                <div class="main-title">भूख लगी है?</div>
+                <div class="subtitle">माघ मेले में 100+ भंडारे!</div>
+                <div class="qr-box">
+                    <div class="qr-placeholder">[QR CODE]</div>
+                </div>
+                <div class="url">bhandarachowk.in</div>
+                <div class="badge">✅ Free • No App • Instant</div>
+            </div>
+        </div>
+
+        <div class="image-container">
+            <div class="image-label">Status 4: Minimal Dark</div>
+            <div class="wa-status status-dark">
+                <div class="logo-circle">
+                    <div class="logo-placeholder" style="color: white;">[LOGO]</div>
+                </div>
+                <div class="brand">BHANDARA CHOWK</div>
+                <div class="main-title">माघ मेला 2025<br>Guide</div>
+                <div class="qr-box">
+                    <div class="qr-placeholder">[QR CODE]</div>
+                </div>
+                <div class="url">bhandarachowk.in</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SQUARE IMAGES (1:1) -->
+    <h2 class="section-title">Square Images (1080x1080 - Posts)</h2>
+    <div class="images-row">
+        <div class="image-container">
+            <div class="image-label">Square 1: General Saffron</div>
+            <div class="square-image square-general">
+                <div class="logo-circle">
+                    <div class="logo-placeholder">[LOGO]</div>
+                </div>
+                <div class="main-title">माघ मेले में<br>कुछ भी खोजें!</div>
+                <div class="qr-box">
+                    <div class="qr-placeholder">[QR CODE]</div>
+                </div>
+                <div class="url">bhandarachowk.in</div>
+            </div>
+        </div>
+
+        <div class="image-container">
+            <div class="image-label">Square 2: Features Light</div>
+            <div class="square-image square-features">
+                <div class="header">
+                    <div class="logo-circle">
+                        <div class="logo-placeholder" style="color: white; font-size: 7px;">[LOGO]</div>
+                    </div>
+                    <div class="brand-name">BHANDARA CHOWK</div>
+                </div>
+                <div class="main-title">माघ मेले में खोजें:</div>
+                <div class="features-grid">
+                    <div class="feature">
+                        <div class="feature-icon">🏥</div>
+                        <div class="feature-text">Medical Camps</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🍽️</div>
+                        <div class="feature-text">भंडारे</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🕉️</div>
+                        <div class="feature-text">अखाड़े</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">📍</div>
+                        <div class="feature-text">संगम</div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="url">bhandarachowk.in</div>
+                    <div class="qr-box">
+                        <div class="qr-placeholder" style="font-size: 8px;">[QR]</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="image-container">
+            <div class="image-label">Square 3: Medical Alert</div>
+            <div class="square-image square-medical">
+                <div class="icon">🏥</div>
+                <div class="main-title">Medical Help खोजें!</div>
+                <div class="subtitle">Free Consultation • Free Medicines</div>
+                <div class="qr-box">
+                    <div class="qr-placeholder">[QR CODE]</div>
+                </div>
+                <div class="url">bhandarachowk.in</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FORWARD CARDS -->
+    <h2 class="section-title">WhatsApp Forward Cards (Landscape)</h2>
+    <div class="images-row">
+        <div class="image-container">
+            <div class="image-label">Forward Card 1</div>
+            <div style="width: 400px; height: 200px; background: linear-gradient(135deg, var(--saffron) 0%, #A0522D 100%); border-radius: 16px; display: flex; align-items: center; padding: 25px; gap: 25px;">
+                <div style="flex: 1;">
+                    <div style="font-family: 'Tiro Devanagari Hindi', serif; font-size: 20px; color: white; margin-bottom: 10px;">माघ मेले में कुछ भी खोजें!</div>
+                    <div style="font-size: 12px; color: rgba(255,255,255,0.9); margin-bottom: 15px;">Medical • भंडारे • संगम • Parking</div>
+                    <div style="font-size: 16px; font-weight: 700; color: white;">bhandarachowk.in</div>
+                </div>
+                <div style="width: 100px; height: 100px; background: white; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                    <div class="qr-placeholder">[QR CODE]</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="image-container">
+            <div class="image-label">Forward Card 2 - Medical</div>
+            <div style="width: 400px; height: 200px; background: linear-gradient(135deg, var(--red) 0%, #B71C1C 100%); border-radius: 16px; display: flex; align-items: center; padding: 25px; gap: 25px;">
+                <div style="font-size: 50px;">🏥</div>
+                <div style="flex: 1;">
+                    <div style="font-family: 'Tiro Devanagari Hindi', serif; font-size: 18px; color: white; margin-bottom: 8px;">EMERGENCY में याद रखें!</div>
+                    <div style="font-size: 12px; color: rgba(255,255,255,0.9); margin-bottom: 12px;">Free Medical Camp खोजें</div>
+                    <div style="font-size: 16px; font-weight: 700; color: white;">bhandarachowk.in</div>
+                </div>
+                <div style="width: 90px; height: 90px; background: white; border-radius: 12px; display: flex; align-items: center; justify-content: center;">
+                    <div class="qr-placeholder">[QR]</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

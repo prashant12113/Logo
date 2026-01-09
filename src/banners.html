@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8">
+  <title>Banners - Bhandara Chowk</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi&family=Poppins:wght@500;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root { --saffron: #C96B4B; --saffron-light: #E8A88A; --dark: #2D2D2D; --cream: #FFF8F5; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Poppins', sans-serif; background: #1a1a1a; padding: 40px; display: flex; flex-direction: column; align-items: center; gap: 50px; }
+    .section { width: 100%; max-width: 1000px; }
+    .title { color: var(--saffron); font-size: 18px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 20px; text-align: center; }
+    .banner { background: var(--saffron); border-radius: 8px; box-shadow: 0 15px 50px rgba(0,0,0,0.5); overflow: hidden; position: relative; }
+    .banner-entry { width: 100%; height: 160px; display: flex; align-items: center; justify-content: space-between; padding: 0 30px; }
+    .entry-left { display: flex; align-items: center; gap: 20px; }
+    .entry-logo { width: 60px; height: 60px; }
+    .entry-main { color: white; }
+    .entry-headline { font-family: 'Tiro Devanagari Hindi', serif; font-size: 28px; line-height: 1.1; }
+    .entry-sub { font-size: 12px; opacity: 0.9; margin-top: 5px; }
+    .entry-services { display: flex; gap: 15px; color: white; }
+    .entry-service { display: flex; align-items: center; gap: 5px; font-size: 14px; background: rgba(255,255,255,0.15); padding: 8px 12px; border-radius: 20px; }
+    .entry-right { display: flex; align-items: center; gap: 15px; }
+    .entry-qr { width: 80px; height: 80px; background: white; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 8px; color: #999; }
+    .entry-url { color: white; font-size: 14px; font-weight: 700; }
+    .banner-standee { width: 250px; height: 600px; display: flex; flex-direction: column; padding: 30px 20px; margin: 0 auto; }
+    .standee-logo { width: 50px; height: 50px; margin: 0 auto 15px; }
+    .standee-headline { font-family: 'Tiro Devanagari Hindi', serif; font-size: 28px; color: white; text-align: center; margin-bottom: 10px; }
+    .standee-sub { color: white; text-align: center; font-size: 12px; opacity: 0.9; }
+    .standee-services { flex: 1; display: flex; flex-direction: column; gap: 10px; margin: 20px 0; }
+    .standee-service { display: flex; align-items: center; gap: 10px; background: rgba(255,255,255,0.15); padding: 12px 15px; border-radius: 8px; color: white; font-size: 13px; }
+    .standee-icon { font-size: 20px; }
+    .standee-qr-box { background: white; border-radius: 12px; padding: 20px; text-align: center; }
+    .standee-qr { width: 100px; height: 100px; background: #f5f5f5; border: 2px dashed #ccc; margin: 0 auto 10px; display: flex; align-items: center; justify-content: center; font-size: 8px; color: #999; border-radius: 8px; }
+    .standee-url { color: var(--saffron); font-size: 16px; font-weight: 800; }
+    .standee-features { display: flex; justify-content: center; gap: 15px; margin-top: 15px; }
+    .standee-feature { font-size: 10px; color: white; background: rgba(255,255,255,0.2); padding: 5px 10px; border-radius: 12px; }
+    .banner-road { width: 100%; height: 80px; display: flex; align-items: center; justify-content: center; gap: 30px; }
+    .road-logo { width: 40px; height: 40px; }
+    .road-text { color: white; font-family: 'Tiro Devanagari Hindi', serif; font-size: 22px; }
+    .road-url { color: white; font-size: 18px; font-weight: 800; background: rgba(0,0,0,0.2); padding: 8px 20px; border-radius: 25px; }
+    .road-qr { width: 50px; height: 50px; background: white; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 6px; color: #999; }
+    .banner-ghat { width: 100%; max-width: 600px; height: 100px; display: flex; align-items: center; justify-content: space-between; padding: 0 25px; margin: 0 auto; background: linear-gradient(135deg, #F5A623 0%, #D4880F 100%); }
+    .ghat-left { display: flex; align-items: center; gap: 15px; color: white; }
+    .ghat-emoji { font-size: 40px; }
+    .ghat-text { font-family: 'Tiro Devanagari Hindi', serif; font-size: 22px; line-height: 1.2; }
+    .ghat-right { display: flex; align-items: center; gap: 15px; }
+    .ghat-qr { width: 60px; height: 60px; background: white; border-radius: 6px; display: flex; align-items: center; justify-content: center; font-size: 6px; color: #999; }
+    .ghat-url { color: white; font-size: 14px; font-weight: 700; }
+    .banner-medical { background: linear-gradient(135deg, #D64545 0%, #B83333 100%); }
+    .info { width: 100%; max-width: 900px; background: #222; border-radius: 12px; padding: 30px; color: #ccc; }
+    .info h2 { color: var(--saffron); margin-bottom: 15px; }
+    .info table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+    .info th, .info td { padding: 10px; text-align: left; border-bottom: 1px solid #444; font-size: 13px; }
+    .info th { color: #E8A88A; }
+  </style>
+</head>
+<body>
+  <div class="section">
+    <div class="title">Entry Gate Banner (10ft × 4ft)</div>
+    <div class="banner banner-entry">
+      <div class="entry-left">
+        <svg class="entry-logo" viewBox="0 0 100 100" fill="white"><circle cx="50" cy="50" r="12" fill="none" stroke="white" stroke-width="6"/><ellipse cx="50" cy="20" rx="6" ry="15"/><ellipse cx="50" cy="80" rx="6" ry="15"/><ellipse cx="20" cy="50" rx="15" ry="6"/><ellipse cx="80" cy="50" rx="15" ry="6"/></svg>
+        <div class="entry-main"><div class="entry-headline">माघ मेले में कुछ भी खोजें!</div><div class="entry-sub">Find Anything in Magh Mela 2025</div></div>
+      </div>
+      <div class="entry-services">
+        <span class="entry-service">🏥 Medical</span>
+        <span class="entry-service">🍽️ भंडारे</span>
+        <span class="entry-service">🕉️ अखाड़े</span>
+        <span class="entry-service">📍 संगम</span>
+      </div>
+      <div class="entry-right">
+        <div><div style="color:white;font-size:11px;margin-bottom:5px;">Scan करें →</div><div class="entry-url">bhandarachowk.in</div></div>
+        <div class="entry-qr">[QR]</div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="title">Vertical Standee (6ft × 2.5ft)</div>
+    <div class="banner banner-standee">
+      <svg class="standee-logo" viewBox="0 0 100 100" fill="white"><circle cx="50" cy="50" r="12" fill="none" stroke="white" stroke-width="6"/><ellipse cx="50" cy="20" rx="6" ry="15"/><ellipse cx="50" cy="80" rx="6" ry="15"/><ellipse cx="20" cy="50" rx="15" ry="6"/><ellipse cx="80" cy="50" rx="15" ry="6"/></svg>
+      <div class="standee-headline">भटकना बंद!</div>
+      <div class="standee-sub">माघ मेले में कुछ भी खोजें</div>
+      <div class="standee-services">
+        <div class="standee-service"><span class="standee-icon">🏥</span> Medical Camps</div>
+        <div class="standee-service"><span class="standee-icon">🍽️</span> भंडारे (Free भोजन)</div>
+        <div class="standee-service"><span class="standee-icon">🕉️</span> अखाड़े</div>
+        <div class="standee-service"><span class="standee-icon">📍</span> संगम</div>
+        <div class="standee-service"><span class="standee-icon">🅿️</span> Parking</div>
+      </div>
+      <div class="standee-qr-box"><div class="standee-qr">[QR CODE]</div><div class="standee-url">bhandarachowk.in</div></div>
+      <div class="standee-features"><span class="standee-feature">✅ Free</span><span class="standee-feature">✅ No Download</span></div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="title">Road-Facing Banner (20ft × 3ft)</div>
+    <div class="banner banner-road">
+      <svg class="road-logo" viewBox="0 0 100 100" fill="white"><circle cx="50" cy="50" r="12" fill="none" stroke="white" stroke-width="6"/><ellipse cx="50" cy="20" rx="6" ry="15"/><ellipse cx="50" cy="80" rx="6" ry="15"/><ellipse cx="20" cy="50" rx="15" ry="6"/><ellipse cx="80" cy="50" rx="15" ry="6"/></svg>
+      <span class="road-text">माघ मेला 2025 — कहाँ है? क्या है? सब कुछ खोजें!</span>
+      <span style="color:white;font-size:24px;">→</span>
+      <span class="road-url">bhandarachowk.in</span>
+      <div class="road-qr">[QR]</div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="title">Ghat Area Banner (8ft × 3ft) - Food</div>
+    <div class="banner banner-ghat">
+      <div class="ghat-left"><span class="ghat-emoji">🍽️</span><span class="ghat-text">स्नान के बाद<br/>भोजन कहाँ?</span></div>
+      <div class="ghat-right"><div style="text-align:right;"><div style="color:white;font-size:11px;">नज़दीकी भंडारा खोजें:</div><div class="ghat-url">bhandarachowk.in</div></div><div class="ghat-qr">[QR]</div></div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="title">Medical Area Banner (8ft × 3ft)</div>
+    <div class="banner banner-ghat banner-medical">
+      <div class="ghat-left"><span class="ghat-emoji">🏥</span><span class="ghat-text">Medical Help?<br/>Nearest camp खोजें</span></div>
+      <div class="ghat-right"><div style="text-align:right;"><div style="color:white;font-size:11px;">FREE Consultation + Medicines</div><div class="ghat-url">bhandarachowk.in</div></div><div class="ghat-qr">[QR]</div></div>
+    </div>
+  </div>
+  <div class="info">
+    <h2>🎨 Banner Specifications</h2>
+    <table>
+      <tr><th>Type</th><th>Size</th><th>Placement</th><th>Material</th><th>Cost</th></tr>
+      <tr><td>Entry Gate</td><td>10ft × 4ft</td><td>Main gates, parking entry</td><td>Star Flex 280 GSM</td><td>₹600-800</td></tr>
+      <tr><td>Vertical Standee</td><td>6ft × 2.5ft</td><td>Info booths, police posts</td><td>Sunboard + Stand</td><td>₹400-600</td></tr>
+      <tr><td>Road Banner</td><td>20ft × 3ft</td><td>Main roads, bridges</td><td>Star Flex 280 GSM</td><td>₹800-1200</td></tr>
+      <tr><td>Ghat/Area Banner</td><td>8ft × 3ft</td><td>Ghats, specific zones</td><td>Star Flex 280 GSM</td><td>₹400-600</td></tr>
+    </table>
+    <p style="margin-top:15px;"><strong>Print:</strong> Digital, UV resistant | <strong>Finishing:</strong> Eyelets on corners</p>
+  </div>
+</body>
+</html>
