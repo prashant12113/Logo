@@ -68,6 +68,7 @@ export default function Flyers() {
             </div>
 
             <div className="MarketingFlyers__bottomNote">🙏 अपने साथियों को भी बताएं!</div>
+            <h4 className="MarketingFlyers__bottomNoteGJ">GJ ENTERPRISES</h4>
           </div>
         </div>
 

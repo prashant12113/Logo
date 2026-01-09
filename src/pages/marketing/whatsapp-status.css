@@ -104,6 +104,9 @@
   font-size: 8px;
   color: var(--saffron);
   text-align: center;
+  overflow: hidden;
+  display: flex;
+  padding: 2px ;
 }
 
 .MarketingWhatsapp__mainTitle {
@@ -150,6 +153,7 @@
   font-size: 10px;
   color: #999;
   text-align: center;
+  align-self: flex-start;
 }
 
 .MarketingWhatsapp__urlWhite {
@@ -314,7 +318,7 @@
   position: relative;
 }
 
-.MarketingWhatsapp__squareGeneral::before {
+/* .MarketingWhatsapp__squareGeneral::before {
   content: '';
   position: absolute;
   width: 200px;
@@ -323,7 +327,7 @@
   border-radius: 16px;
   top: -50px;
   right: -50px;
-}
+} */
 
 .MarketingWhatsapp__logoCircleSquare {
   width: 55px;
@@ -369,6 +373,7 @@
 .MarketingWhatsapp__featuresHeader {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 12px;
   margin-bottom: 20px;
 }
@@ -394,6 +399,7 @@
   font-size: 22px;
   color: var(--dark-brown);
   margin-bottom: 15px;
+  align-self: center;
 }
 
 .MarketingWhatsapp__featuresGrid {
@@ -439,7 +445,6 @@
   height: 60px;
   background: white;
   border: 2px solid var(--saffron-light);
-  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;

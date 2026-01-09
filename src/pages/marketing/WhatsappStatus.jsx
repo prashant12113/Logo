@@ -78,7 +78,7 @@ export default function WhatsappStatus() {
           <div className="MarketingWhatsapp__waStatus MarketingWhatsapp__statusDark">
             <div className="MarketingWhatsapp__logoCircleDark">
               <div className="MarketingWhatsapp__logoPlaceholder" style={{ color: 'white' }}>
-                <img src={`${import.meta.env.BASE_URL}chowk-icon.svg`} alt="Bhandara Chowk Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                <img src={`${import.meta.env.BASE_URL}chowk-icon-mono-white.svg`} alt="Bhandara Chowk Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
               </div>
             </div>
             <div className="MarketingWhatsapp__brand">BHANDARA CHOWK</div>
@@ -124,7 +124,7 @@ export default function WhatsappStatus() {
                   className="MarketingWhatsapp__logoPlaceholder"
                   style={{ color: 'white', fontSize: 7 }}
                 >
-                  <img src={`${import.meta.env.BASE_URL}chowk-icon.svg`} alt="Bhandara Chowk Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
+                  <img src={`${import.meta.env.BASE_URL}chowk-icon-mono-white.svg`} alt="Bhandara Chowk Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />
                 </div>
               </div>
               <div className="MarketingWhatsapp__brandName">BHANDARA CHOWK</div>

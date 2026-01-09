@@ -130,15 +130,18 @@ export default function Stickers() {
         <div className="MarketingStickers__container">
           <div className="MarketingStickers__label">Back Panel (18&quot; x 12&quot;)</div>
           <div className="MarketingStickers__autoBack">
-            <div className="MarketingStickers__autoBackDesign">
-              <div className="MarketingStickers__autoLeft">
-                <div className="MarketingStickers__autoTitle">माघ मेले में भटक गए?</div>
-                <div className="MarketingStickers__autoSubtitle">
-                  कुछ भी खोजें - Medical, भंडारा, संगम
+            <div className='MarketingStickersLogo'>
+              <div className="MarketingStickers__logoCircleLarge"><img src={`${import.meta.env.BASE_URL}chowk-icon.svg`} alt="Bhandara Chowk Logo" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
+              <div className="MarketingStickers__autoBackDesign">
+                <div className="MarketingStickers__autoLeft">
+                  <div className="MarketingStickers__autoTitle">माघ मेले में भटक गए?</div>
+                  <div className="MarketingStickers__autoSubtitle">
+                    कुछ भी खोजें - Medical, भंडारा, संगम
+                  </div>
+                  <div className="MarketingStickers__autoUrl">bhandarachowk.in</div>
                 </div>
-                <div className="MarketingStickers__autoUrl">bhandarachowk.in</div>
+                <div className="MarketingStickers__autoQrBox"><img src={`${import.meta.env.BASE_URL}qr/frame.jpg`} alt="QR Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
               </div>
-              <div className="MarketingStickers__autoQrBox"><img src={`${import.meta.env.BASE_URL}qr/frame.jpg`} alt="QR Code" style={{ width: '100%', height: '100%', objectFit: 'contain' }} /></div>
             </div>
           </div>
         </div>

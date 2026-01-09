@@ -1,13 +1,21 @@
 import './banners.css';
 
 const LogoSvg = ({ className }) => (
-  <svg className={className} viewBox="0 0 100 100" fill="white">
-    <circle cx="50" cy="50" r="12" fill="none" stroke="white" strokeWidth="6" />
-    <ellipse cx="50" cy="20" rx="6" ry="15" />
-    <ellipse cx="50" cy="80" rx="6" ry="15" />
-    <ellipse cx="20" cy="50" rx="15" ry="6" />
-    <ellipse cx="80" cy="50" rx="15" ry="6" />
-  </svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+
+  <path d="M50 6 Q60 20 54 36 L50 32 L46 36 Q40 20 50 6" fill="#FFFFFF"/>
+  <path d="M94 50 Q80 60 64 54 L68 50 L64 46 Q80 40 94 50" fill="#FFFFFF"/>
+  <path d="M50 94 Q40 80 46 64 L50 68 L54 64 Q60 80 50 94" fill="#FFFFFF"/>
+  <path d="M6 50 Q20 40 36 46 L32 50 L36 54 Q20 60 6 50" fill="#FFFFFF"/>
+  
+  <path d="M80 20 Q72 30 60 38 L58 34 Q66 28 74 18 Q78 16 80 20" fill="#FFFFFF" opacity="0.6"/>
+  <path d="M80 80 Q72 70 60 62 L58 66 Q66 72 74 82 Q78 84 80 80" fill="#FFFFFF" opacity="0.6"/>
+  <path d="M20 80 Q28 70 40 62 L42 66 Q34 72 26 82 Q22 84 20 80" fill="#FFFFFF" opacity="0.6"/>
+  <path d="M20 20 Q28 30 40 38 L42 34 Q34 28 26 18 Q22 16 20 20" fill="#FFFFFF" opacity="0.6"/>
+  
+  <circle cx="50" cy="50" r="12" fill="#FFFFFF"/>
+  <circle cx="50" cy="50" r="5" fill="#1A1614"/>
+</svg>
 );
 
 export default function Banners() {
