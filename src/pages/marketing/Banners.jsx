@@ -20,7 +20,7 @@ export default function Banners() {
             <LogoSvg className="MarketingBanners__entryLogo" />
             <div className="MarketingBanners__entryMain">
               <div className="MarketingBanners__entryHeadline">माघ मेले में कुछ भी खोजें!</div>
-              <div className="MarketingBanners__entrySub">Find Anything in Magh Mela 2025</div>
+              <div className="MarketingBanners__entrySub">Find Anything in Magh Mela 2026</div>
             </div>
           </div>
 
@@ -80,7 +80,7 @@ export default function Banners() {
         <div className="MarketingBanners__banner MarketingBanners__bannerRoad">
           <LogoSvg className="MarketingBanners__roadLogo" />
           <span className="MarketingBanners__roadText">
-            माघ मेला 2025 — कहाँ है? क्या है? सब कुछ खोजें!
+            माघ मेला 2026 — कहाँ है? क्या है? सब कुछ खोजें!
           </span>
           <span style={{ color: 'white', fontSize: 24 }}>→</span>
           <span className="MarketingBanners__roadUrl">bhandarachowk.in</span>

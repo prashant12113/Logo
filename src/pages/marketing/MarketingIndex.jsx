@@ -5,7 +5,7 @@ export default function MarketingIndex({ onNavigate }) {
     <div className="MarketingIndex">
       <div className="MarketingIndex__header">
         <h1 className="MarketingIndex__title">BHANDARA CHOWK</h1>
-        <p className="MarketingIndex__subtitle">माघ मेला 2025 - Marketing Materials</p>
+        <p className="MarketingIndex__subtitle">माघ मेला 2026 - Marketing Materials</p>
         <div className="MarketingIndex__urlHighlight">bhandarachowk.in</div>
       </div>
 

@@ -83,7 +83,7 @@ export default function WhatsappStatus() {
             </div>
             <div className="MarketingWhatsapp__brand">BHANDARA CHOWK</div>
             <div className="MarketingWhatsapp__mainTitleDark">
-              माघ मेला 2025
+              माघ मेला 2026
               <br />
               Guide
             </div>

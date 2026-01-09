@@ -198,7 +198,7 @@ export default function Flyers() {
             <div className="MarketingFlyers__spiritualHeader">
               <div className="MarketingFlyers__omSymbol">🙏</div>
               <div className="MarketingFlyers__spiritualTitle">कल्पवासियों के लिए</div>
-              <div className="MarketingFlyers__spiritualSubtitle">माघ मेला 2025</div>
+              <div className="MarketingFlyers__spiritualSubtitle">माघ मेला 2026</div>
             </div>
 
             <div className="MarketingFlyers__content MarketingFlyers__contentSpiritual">
